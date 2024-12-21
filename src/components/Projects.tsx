@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Project One",
     description: "A web application built with React and TypeScript.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     tech: ["React", "TypeScript", "Tailwind"],
     links: {
       github: "#",
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Project Two",
     description: "An e-commerce platform with modern design.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     tech: ["Next.js", "Node.js", "MongoDB"],
     links: {
       github: "#",
@@ -43,6 +43,25 @@ export const Projects = () => {
       transition: {
         duration: 0.8,
         ease: [0.43, 0.13, 0.23, 0.96]
+      }
+    }
+  };
+
+  const imageVariants = {
+    rest: {
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        type: "tween",
+        ease: "easeOut"
+      }
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.5,
+        type: "tween",
+        ease: "easeOut"
       }
     }
   };
@@ -85,10 +104,13 @@ export const Projects = () => {
               className="group relative overflow-hidden rounded-2xl bg-white/50 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all"
             >
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                initial="rest"
+                whileHover="hover"
+                animate="rest"
                 className="aspect-video overflow-hidden"
               >
-                <img
+                <motion.img
+                  variants={imageVariants}
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
