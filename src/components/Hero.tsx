@@ -17,10 +17,19 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-4 relative">
+      <div 
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.1
+        }}
+      />
       <motion.div
         initial="hidden"
         animate="visible"
-        className="text-center max-w-3xl mx-auto"
+        className="text-center max-w-3xl mx-auto backdrop-blur-sm bg-white/30 p-8 rounded-2xl"
       >
         <motion.span
           custom={0}

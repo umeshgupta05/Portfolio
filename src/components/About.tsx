@@ -3,7 +3,16 @@ import { GraduationCap, Heart, Coffee } from "lucide-react";
 
 export const About = () => {
   return (
-    <section className="py-20 px-4" id="about">
+    <section className="py-20 px-4 relative" id="about">
+      <div 
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2000&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.05
+        }}
+      />
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
