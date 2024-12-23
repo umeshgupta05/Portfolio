@@ -3,22 +3,32 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A web application built with React and TypeScript.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tech: ["React", "TypeScript", "Tailwind"],
+    title: "Attendance Management System",
+    description: "A face recognition-based system to automate attendance tracking with real-time detection.",
+    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
+    tech: ["Python", "OpenCV", "PyMySQL"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/attendance-management",
       live: "#",
     },
   },
   {
-    title: "Project Two",
-    description: "An e-commerce platform with modern design.",
+    title: "Smart Summarizer",
+    description: "A robust application prototype to generate concise summaries for PDF documents using state-of-the-art transformer models.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tech: ["Next.js", "Node.js", "MongoDB"],
+    tech: ["Python", "Transformers", "NLP"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/smart-summarizer",
+      live: "#",
+    },
+  },
+  {
+    title: "RetailEdge: E-Commerce Platform",
+    description: "A dynamic e-commerce website featuring seamless shopping experience with intelligent product recommendations.",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    tech: ["React.js", "Node.js", "JavaScript"],
+    links: {
+      github: "https://github.com/umeshgupta05/retail-edge",
       live: "#",
     },
   },

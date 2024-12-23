@@ -52,17 +52,17 @@ export const Hero = () => {
           variants={textVariants}
           className="text-4xl md:text-6xl font-bold mb-6"
         >
-          Hi, I'm <span className={gradientText}>Your Name</span>
+          Hi, I'm <span className={gradientText}>Umesh Gupta Pedamallu</span>
           <br />
-          <span className="text-terra hover:text-terra-light transition-colors">Aspiring Developer</span>
+          <span className="text-terra hover:text-terra-light transition-colors">Computer Science Student</span>
         </motion.h1>
         <motion.p
           custom={2}
           variants={textVariants}
           className="text-muted-foreground text-lg md:text-xl mb-8 hover:text-foreground transition-colors"
         >
-          Passionate about creating beautiful and functional web experiences.
-          Currently seeking opportunities to grow and learn.
+          A passionate developer with expertise in AI, Web Development, and Cloud Technologies.
+          Currently pursuing B.Tech in Computer Science with CGPA: 9.49/10.0
         </motion.p>
         <motion.button
           whileHover={{ scale: 1.05, backgroundColor: '#A3B9A0' }}

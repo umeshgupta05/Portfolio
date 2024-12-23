@@ -42,21 +42,21 @@ export const About = () => {
               icon: GraduationCap,
               title: "Education",
               description:
-                "Currently pursuing [Your Degree] with a focus on web development and software engineering.",
+                "B.Tech in Computer Science from Velagapudi Ramakrishna Siddhartha Engineering College with 9.49 CGPA",
               color: "sage"
             },
             {
               icon: Heart,
-              title: "Passion",
+              title: "Experience",
               description:
-                "Deeply passionate about creating intuitive user interfaces and solving complex problems.",
+                "Math Tutor at Outlier.ai and AI & Cloud Intern at Edunet Foundation, working on AI models and cloud solutions",
               color: "terra"
             },
             {
               icon: Coffee,
-              title: "Learning",
+              title: "Achievements",
               description:
-                "Always eager to learn new technologies and stay updated with the latest industry trends.",
+                "Top 2% in NPTEL C++, Rs 50,000 Merit Scholarship, 300+ LeetCode problems solved",
               color: "sage"
             },
           ].map((item, index) => (
