@@ -32,9 +32,18 @@ const projects = [
       live: "#",
     },
   },
+  {
+    title: "AI-Powered Chat Application",
+    description: "Real-time chat application with AI-powered features including sentiment analysis and automated responses.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    tech: ["Python", "TensorFlow", "WebSocket"],
+    links: {
+      github: "https://github.com/umeshgupta05/ai-chat",
+      live: "#",
+    },
+  },
 ];
 
-export const Projects = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -76,6 +85,7 @@ export const Projects = () => {
     }
   };
 
+export const Projects = () => {
   return (
     <section className="py-20 px-4" id="projects">
       <div className="max-w-6xl mx-auto">
