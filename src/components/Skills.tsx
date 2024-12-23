@@ -1,18 +1,43 @@
 import { motion } from "framer-motion";
 
 const skills = [
+  // Programming Languages
   { name: "Python", level: 90, category: "Programming Languages" },
   { name: "C++", level: 85, category: "Programming Languages" },
   { name: "Java", level: 80, category: "Programming Languages" },
-  { name: "JavaScript", level: 85, category: "Web Technologies" },
+  { name: "C", level: 75, category: "Programming Languages" },
+  { name: "R", level: 65, category: "Programming Languages" },
+  
+  // Web Development
   { name: "React.js", level: 85, category: "Web Technologies" },
-  { name: "Node.js", level: 75, category: "Web Technologies" },
+  { name: "Angular", level: 80, category: "Web Technologies" },
+  { name: "Node.js", level: 85, category: "Web Technologies" },
+  { name: "Express.js", level: 80, category: "Web Technologies" },
+  { name: "JavaScript", level: 90, category: "Web Technologies" },
+  { name: "TypeScript", level: 85, category: "Web Technologies" },
+  { name: "HTML5", level: 90, category: "Web Technologies" },
+  { name: "CSS3", level: 85, category: "Web Technologies" },
+  
+  // Frameworks & Tools
+  { name: "Flask", level: 80, category: "Frameworks & Tools" },
+  { name: "Docker", level: 75, category: "Frameworks & Tools" },
+  { name: "Git", level: 85, category: "Frameworks & Tools" },
   { name: "Machine Learning", level: 80, category: "AI & ML" },
-  { name: "Deep Learning", level: 75, category: "AI & ML" },
-  { name: "Computer Vision", level: 70, category: "AI & ML" },
+  { name: "Computer Vision", level: 75, category: "AI & ML" },
+  
+  // Cloud Technologies
   { name: "AWS", level: 70, category: "Cloud Technologies" },
-  { name: "Docker", level: 65, category: "DevOps" },
-  { name: "Git", level: 85, category: "DevOps" },
+  { name: "IBM Cloud", level: 65, category: "Cloud Technologies" },
+  
+  // Database Systems
+  { name: "MongoDB", level: 80, category: "Database Systems" },
+  { name: "SQL", level: 85, category: "Database Systems" },
+  { name: "Database Design", level: 80, category: "Database Systems" },
+  
+  // Development Tools
+  { name: "VS Code", level: 90, category: "Development Tools" },
+  { name: "IntelliJ IDE", level: 85, category: "Development Tools" },
+  { name: "Linux", level: 80, category: "Development Tools" },
 ];
 
 const categories = Array.from(new Set(skills.map(skill => skill.category)));
