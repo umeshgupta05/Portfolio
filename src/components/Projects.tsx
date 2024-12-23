@@ -33,12 +33,12 @@ const projects = [
     },
   },
   {
-    title: "AI-Powered Chat Application",
-    description: "Real-time chat application with AI-powered features including sentiment analysis and automated responses.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tech: ["Python", "TensorFlow", "WebSocket"],
+    title: "MediPlant: Medical Plant Detection Platform",
+    description: "A comprehensive platform for medical students featuring plant detection AI, discussions, blogs, and research paper collaboration. Includes authentication, real-time plant detection, and community features.",
+    image: "https://images.unsplash.com/photo-1585435557343-3b092031a831",
+    tech: ["React.js", "Machine Learning", "Node.js", "MongoDB"],
     links: {
-      github: "https://github.com/umeshgupta05/ai-chat",
+      github: "https://github.com/umeshgupta05/mediplant",
       live: "#",
     },
   },
