@@ -3,42 +3,42 @@ import { Code2, Braces, Database, Cloud, Terminal, Wrench } from "lucide-react";
 
 const skills = [
   // Programming Languages
-  { name: "Python", category: "Programming Languages" },
-  { name: "C++", category: "Programming Languages" },
-  { name: "Java", category: "Programming Languages" },
-  { name: "C", category: "Programming Languages" },
-  { name: "R", category: "Programming Languages" },
+  { name: "Python", category: "Programming Languages", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "C++", category: "Programming Languages", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+  { name: "Java", category: "Programming Languages", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "C", category: "Programming Languages", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+  { name: "R", category: "Programming Languages", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" },
   
   // Web Development
-  { name: "React.js", category: "Web Technologies" },
-  { name: "Angular", category: "Web Technologies" },
-  { name: "Node.js", category: "Web Technologies" },
-  { name: "Express.js", category: "Web Technologies" },
-  { name: "JavaScript", category: "Web Technologies" },
-  { name: "TypeScript", category: "Web Technologies" },
-  { name: "HTML5", category: "Web Technologies" },
-  { name: "CSS3", category: "Web Technologies" },
+  { name: "React.js", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Angular", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+  { name: "Node.js", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Express.js", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  { name: "JavaScript", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "HTML5", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3", category: "Web Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   
   // Frameworks & Tools
-  { name: "Flask", category: "Frameworks & Tools" },
-  { name: "Docker", category: "Frameworks & Tools" },
-  { name: "Git", category: "Frameworks & Tools" },
-  { name: "Machine Learning", category: "AI & ML" },
-  { name: "Computer Vision", category: "AI & ML" },
+  { name: "Flask", category: "Frameworks & Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+  { name: "Docker", category: "Frameworks & Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Git", category: "Frameworks & Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Machine Learning", category: "AI & ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+  { name: "Computer Vision", category: "AI & ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
   
   // Cloud Technologies
-  { name: "AWS", category: "Cloud Technologies" },
-  { name: "IBM Cloud", category: "Cloud Technologies" },
+  { name: "AWS", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+  { name: "IBM Cloud", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-original.svg" },
   
   // Database Systems
-  { name: "MongoDB", category: "Database Systems" },
-  { name: "SQL", category: "Database Systems" },
-  { name: "Database Design", category: "Database Systems" },
+  { name: "MongoDB", category: "Database Systems", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "SQL", category: "Database Systems", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "Database Design", category: "Database Systems", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
   
   // Development Tools
-  { name: "VS Code", category: "Development Tools" },
-  { name: "IntelliJ IDE", category: "Development Tools" },
-  { name: "Linux", category: "Development Tools" },
+  { name: "VS Code", category: "Development Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+  { name: "IntelliJ IDE", category: "Development Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" },
+  { name: "Linux", category: "Development Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
 ];
 
 const getCategoryIcon = (category: string) => {
@@ -136,7 +136,14 @@ export const Skills = () => {
                       whileHover={{ scale: 1.05 }}
                       className="p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
                     >
-                      <span className="font-medium text-foreground">{skill.name}</span>
+                      <div className="flex flex-col items-center gap-3">
+                        <img 
+                          src={skill.icon} 
+                          alt={skill.name} 
+                          className="w-12 h-12 object-contain"
+                        />
+                        <span className="font-medium text-foreground">{skill.name}</span>
+                      </div>
                     </motion.div>
                   ))}
               </div>
