@@ -28,7 +28,7 @@ const skills = [
   
   // Cloud Technologies
   { name: "AWS", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-  { name: "IBM Cloud", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-plain.svg" },
+  { name: "IBM Cloud", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-original.svg" },
   
   // Database Systems
   { name: "MongoDB", category: "Database Systems", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
@@ -83,8 +83,15 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-sage/5" id="skills">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-4 relative" id="skills">
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white opacity-90"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a3b9a0' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }}
+      />
+      <div className="max-w-6xl mx-auto relative">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -96,13 +103,13 @@ export const Skills = () => {
             variants={skillVariants}
             className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10"
           >
-            Skills
+            Technical Proficiency
           </motion.span>
           <motion.h2
             variants={skillVariants}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            Technical Expertise
+            Skills & Expertise
           </motion.h2>
         </motion.div>
 
@@ -125,7 +132,7 @@ export const Skills = () => {
                 </motion.div>
                 <h3 className="text-xl font-semibold text-terra">{category}</h3>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {skills
                   .filter(skill => skill.category === category)
                   .map((skill) => (
@@ -133,16 +140,16 @@ export const Skills = () => {
                       key={skill.name}
                       variants={skillVariants}
                       whileHover={{ scale: 1.05 }}
-                      className="p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
+                      className="p-6 bg-white/80 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center gap-4"
                     >
-                      <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 flex items-center justify-center">
                         <img 
                           src={skill.icon} 
                           alt={skill.name} 
-                          className="w-12 h-12 object-contain"
+                          className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
                         />
-                        <span className="font-medium text-foreground">{skill.name}</span>
                       </div>
+                      <span className="font-medium text-foreground text-center">{skill.name}</span>
                     </motion.div>
                   ))}
               </div>
