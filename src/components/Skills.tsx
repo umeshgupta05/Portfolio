@@ -1,44 +1,62 @@
 import { motion } from "framer-motion";
+import { Code2, Braces, Database, Cloud, Terminal, Wrench } from "lucide-react";
 
 const skills = [
   // Programming Languages
-  { name: "Python", level: 90, category: "Programming Languages" },
-  { name: "C++", level: 85, category: "Programming Languages" },
-  { name: "Java", level: 80, category: "Programming Languages" },
-  { name: "C", level: 75, category: "Programming Languages" },
-  { name: "R", level: 65, category: "Programming Languages" },
+  { name: "Python", category: "Programming Languages" },
+  { name: "C++", category: "Programming Languages" },
+  { name: "Java", category: "Programming Languages" },
+  { name: "C", category: "Programming Languages" },
+  { name: "R", category: "Programming Languages" },
   
   // Web Development
-  { name: "React.js", level: 85, category: "Web Technologies" },
-  { name: "Angular", level: 80, category: "Web Technologies" },
-  { name: "Node.js", level: 85, category: "Web Technologies" },
-  { name: "Express.js", level: 80, category: "Web Technologies" },
-  { name: "JavaScript", level: 90, category: "Web Technologies" },
-  { name: "TypeScript", level: 85, category: "Web Technologies" },
-  { name: "HTML5", level: 90, category: "Web Technologies" },
-  { name: "CSS3", level: 85, category: "Web Technologies" },
+  { name: "React.js", category: "Web Technologies" },
+  { name: "Angular", category: "Web Technologies" },
+  { name: "Node.js", category: "Web Technologies" },
+  { name: "Express.js", category: "Web Technologies" },
+  { name: "JavaScript", category: "Web Technologies" },
+  { name: "TypeScript", category: "Web Technologies" },
+  { name: "HTML5", category: "Web Technologies" },
+  { name: "CSS3", category: "Web Technologies" },
   
   // Frameworks & Tools
-  { name: "Flask", level: 80, category: "Frameworks & Tools" },
-  { name: "Docker", level: 75, category: "Frameworks & Tools" },
-  { name: "Git", level: 85, category: "Frameworks & Tools" },
-  { name: "Machine Learning", level: 80, category: "AI & ML" },
-  { name: "Computer Vision", level: 75, category: "AI & ML" },
+  { name: "Flask", category: "Frameworks & Tools" },
+  { name: "Docker", category: "Frameworks & Tools" },
+  { name: "Git", category: "Frameworks & Tools" },
+  { name: "Machine Learning", category: "AI & ML" },
+  { name: "Computer Vision", category: "AI & ML" },
   
   // Cloud Technologies
-  { name: "AWS", level: 70, category: "Cloud Technologies" },
-  { name: "IBM Cloud", level: 65, category: "Cloud Technologies" },
+  { name: "AWS", category: "Cloud Technologies" },
+  { name: "IBM Cloud", category: "Cloud Technologies" },
   
   // Database Systems
-  { name: "MongoDB", level: 80, category: "Database Systems" },
-  { name: "SQL", level: 85, category: "Database Systems" },
-  { name: "Database Design", level: 80, category: "Database Systems" },
+  { name: "MongoDB", category: "Database Systems" },
+  { name: "SQL", category: "Database Systems" },
+  { name: "Database Design", category: "Database Systems" },
   
   // Development Tools
-  { name: "VS Code", level: 90, category: "Development Tools" },
-  { name: "IntelliJ IDE", level: 85, category: "Development Tools" },
-  { name: "Linux", level: 80, category: "Development Tools" },
+  { name: "VS Code", category: "Development Tools" },
+  { name: "IntelliJ IDE", category: "Development Tools" },
+  { name: "Linux", category: "Development Tools" },
 ];
+
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case "Programming Languages":
+      return <Code2 className="w-6 h-6" />;
+    case "Web Technologies":
+      return <Braces className="w-6 h-6" />;
+    case "Database Systems":
+      return <Database className="w-6 h-6" />;
+    case "Cloud Technologies":
+      return <Cloud className="w-6 h-6" />;
+    case "Development Tools":
+      return <Terminal className="w-6 h-6" />;
+    default:
+      return <Wrench className="w-6 h-6" />;
+  }
+};
 
 const categories = Array.from(new Set(skills.map(skill => skill.category)));
 
@@ -98,29 +116,27 @@ export const Skills = () => {
         >
           {categories.map((category) => (
             <div key={category} className="space-y-6">
-              <h3 className="text-xl font-semibold text-terra mb-4">{category}</h3>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex items-center gap-3">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-terra"
+                >
+                  {getCategoryIcon(category)}
+                </motion.div>
+                <h3 className="text-xl font-semibold text-terra">{category}</h3>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {skills
                   .filter(skill => skill.category === category)
                   .map((skill) => (
                     <motion.div
                       key={skill.name}
                       variants={skillVariants}
-                      className="relative"
+                      whileHover={{ scale: 1.05 }}
+                      className="p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
                     >
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <div className="h-2 bg-sage/20 rounded-full overflow-hidden">
-                        <motion.div
-                          className="h-full bg-sage rounded-full"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, ease: "easeOut" }}
-                        />
-                      </div>
+                      <span className="font-medium text-foreground">{skill.name}</span>
                     </motion.div>
                   ))}
               </div>
