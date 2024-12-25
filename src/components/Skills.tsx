@@ -83,15 +83,8 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 px-4 relative" id="skills">
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white opacity-90"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a3b9a0' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px'
-        }}
-      />
-      <div className="max-w-6xl mx-auto relative">
+    <section className="py-20 px-4 bg-gray-50" id="skills">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -140,7 +133,7 @@ export const Skills = () => {
                       key={skill.name}
                       variants={skillVariants}
                       whileHover={{ scale: 1.05 }}
-                      className="p-6 bg-white/80 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center gap-4"
+                      className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center gap-4"
                     >
                       <div className="w-16 h-16 flex items-center justify-center">
                         <img 

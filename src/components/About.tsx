@@ -3,23 +3,7 @@ import { GraduationCap, Heart, Coffee } from "lucide-react";
 
 export const About = () => {
   return (
-    <section className="py-20 px-4 relative" id="about">
-      <div 
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to right, #ee9ca7, #ffdde1)`,
-          opacity: 0.05
-        }}
-      />
-      <div 
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2000&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.05
-        }}
-      />
+    <section className="py-20 px-4 bg-white" id="about">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +51,7 @@ export const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all duration-300"
+              className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <motion.div 
                 className={`w-12 h-12 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4 mx-auto`}
