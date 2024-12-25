@@ -83,7 +83,7 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-sage/5" id="skills">
+    <section className="py-20 px-4 bg-white" id="skills">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -123,9 +123,14 @@ export const Skills = () => {
                 >
                   {getCategoryIcon(category)}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-terra">{category}</h3>
+                <motion.h3 
+                  variants={skillVariants}
+                  className="text-xl font-semibold text-terra"
+                >
+                  {category}
+                </motion.h3>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {skills
                   .filter(skill => skill.category === category)
                   .map((skill) => (
@@ -133,7 +138,7 @@ export const Skills = () => {
                       key={skill.name}
                       variants={skillVariants}
                       whileHover={{ scale: 1.05 }}
-                      className="p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
+                      className="p-4 bg-gray-50 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
                     >
                       <div className="flex flex-col items-center gap-3">
                         <img 
@@ -141,7 +146,12 @@ export const Skills = () => {
                           alt={skill.name} 
                           className="w-12 h-12 object-contain"
                         />
-                        <span className="font-medium text-foreground">{skill.name}</span>
+                        <motion.span 
+                          variants={skillVariants}
+                          className="font-medium text-foreground"
+                        >
+                          {skill.name}
+                        </motion.span>
                       </div>
                     </motion.div>
                   ))}
