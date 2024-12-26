@@ -16,7 +16,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden bg-white">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -25,7 +25,7 @@ export const Hero = () => {
         <motion.span
           custom={0}
           variants={textVariants}
-          className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10 hover:bg-sage/20 transition-colors"
+          className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10"
         >
           Welcome to my portfolio
         </motion.span>
@@ -36,22 +36,22 @@ export const Hero = () => {
         >
           Hi, I'm <span className="text-terra">Umesh Gupta Pedamallu</span>
           <br />
-          <span className="text-terra hover:text-terra-light transition-colors">Computer Science Student</span>
+          <span className="text-terra">Computer Science Student</span>
         </motion.h1>
         <motion.p
           custom={2}
           variants={textVariants}
-          className="text-muted-foreground text-lg md:text-xl mb-8 hover:text-foreground transition-colors"
+          className="text-muted-foreground text-lg md:text-xl mb-8"
         >
           A passionate developer with expertise in AI, Web Development, and Cloud Technologies.
           Currently pursuing B.Tech in Computer Science with CGPA: 9.49/10.0
         </motion.p>
         <motion.button
-          whileHover={{ scale: 1.05, backgroundColor: '#A3B9A0' }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           custom={3}
           variants={textVariants}
-          className="bg-sage text-white px-6 py-3 rounded-lg font-medium shadow-lg transition-all duration-300 hover:shadow-xl"
+          className="bg-sage text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-sage-light transition-colors duration-300"
         >
           View My Work
         </motion.button>
@@ -66,7 +66,7 @@ export const Hero = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ArrowDown className="w-6 h-6 text-muted-foreground hover:text-terra transition-colors" />
+          <ArrowDown className="w-6 h-6 text-muted-foreground" />
         </motion.div>
       </motion.div>
     </section>

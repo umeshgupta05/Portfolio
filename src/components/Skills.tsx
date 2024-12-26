@@ -28,7 +28,7 @@ const skills = [
   
   // Cloud Technologies
   { name: "AWS", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-  { name: "IBM Cloud", category: "Cloud Technologies", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-original.svg" },
+  { name: "IBM Cloud", category: "Cloud Technologies", icon: "/lovable-uploads/3e1f5669-6410-49c5-83f6-effdab932cba.png" },
   
   // Database Systems
   { name: "MongoDB", category: "Database Systems", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
