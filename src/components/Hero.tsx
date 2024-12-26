@@ -15,26 +15,8 @@ export const Hero = () => {
     })
   };
 
-  const gradientText = "bg-gradient-to-r from-terra via-sage to-terra bg-clip-text text-transparent animate-gradient";
-
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 -z-10 animate-pulse"
-        style={{
-          backgroundImage: `linear-gradient(225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)`,
-          opacity: 0.05
-        }}
-      />
-      <div 
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.1
-        }}
-      />
       <motion.div
         initial="hidden"
         animate="visible"
@@ -52,7 +34,7 @@ export const Hero = () => {
           variants={textVariants}
           className="text-4xl md:text-6xl font-bold mb-6"
         >
-          Hi, I'm <span className={gradientText}>Umesh Gupta Pedamallu</span>
+          Hi, I'm <span className="text-terra">Umesh Gupta Pedamallu</span>
           <br />
           <span className="text-terra hover:text-terra-light transition-colors">Computer Science Student</span>
         </motion.h1>
