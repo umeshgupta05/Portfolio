@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Attendance Management System",
     description: "A face recognition-based system to automate attendance tracking with real-time detection.",
-    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
+    image: "/lovable-uploads/7900aada-266f-4c47-9bfc-cc9b56387ae4.png",
     tech: ["Python", "OpenCV", "PyMySQL"],
     links: {
       github: "https://github.com/umeshgupta05/attendance-management",
@@ -35,7 +35,7 @@ const projects = [
   {
     title: "MediPlant: Medical Plant Detection Platform",
     description: "A comprehensive platform for medical students featuring plant detection AI, discussions, blogs, and research paper collaboration. Includes authentication, real-time plant detection, and community features.",
-    image: "https://images.unsplash.com/photo-1585435557343-3b092031a831",
+    image: "/lovable-uploads/b6169754-be5f-4e39-a499-46411fafd161.png",
     tech: ["React.js", "Machine Learning", "Node.js", "MongoDB"],
     links: {
       github: "https://github.com/umeshgupta05/mediplant",

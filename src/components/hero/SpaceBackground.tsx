@@ -6,6 +6,7 @@ export const SpaceBackground = () => {
       <div className="stars-3"></div>
       <div className="planet" style={{ top: '10%', right: '15%' }}></div>
       <div className="rocket"></div>
+      <div className="satellite" style={{ top: '30%', left: '20%' }}></div>
     </div>
   );
 };

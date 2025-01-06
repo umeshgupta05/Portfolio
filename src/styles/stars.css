@@ -4,7 +4,8 @@
     width: 2px;
     height: 2px;
     background: transparent;
-    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff;
+    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff,
+    1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff; /* Added more stars */
     animation: animStar 50s linear infinite;
   }
 
@@ -13,7 +14,8 @@
     width: 3px;
     height: 3px;
     background: transparent;
-    box-shadow: 1124px 522px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff;
+    box-shadow: 1124px 522px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff,
+    1124px 522px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff; /* Added more stars */
     animation: animStar 100s linear infinite;
   }
 
@@ -22,7 +24,8 @@
     width: 4px;
     height: 4px;
     background: transparent;
-    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff;
+    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff,
+    1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff; /* Added more stars */
     animation: animStar 150s linear infinite;
   }
 
@@ -44,48 +47,31 @@
     animation: flyRocket 30s linear infinite;
   }
 
+  .satellite {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z'/%3E%3C/svg%3E");
+    animation: orbitSatellite 40s linear infinite;
+  }
+
   @keyframes animStar {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
   }
 
   @keyframes floatPlanet {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(20px, -20px);
-    }
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
   }
 
   @keyframes flyRocket {
-    0% {
-      transform: translate(-100vw, 100vh) rotate(45deg);
-    }
-    100% {
-      transform: translate(100vw, -100vh) rotate(45deg);
-    }
+    0% { transform: translate(-100vw, 100vh) rotate(45deg); }
+    100% { transform: translate(100vw, -100vh) rotate(45deg); }
   }
 
-  .skill-icon {
-    @apply relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300;
-  }
-
-  .skill-icon:hover {
-    @apply transform scale-110 bg-white/20;
-  }
-
-  .skill-icon::after {
-    content: '';
-    @apply absolute -inset-0.5 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 transition-opacity duration-300;
-    z-index: -1;
-  }
-
-  .skill-icon:hover::after {
-    @apply opacity-100;
+  @keyframes orbitSatellite {
+    0% { transform: translate(-50vw, -50vh) rotate(0deg); }
+    100% { transform: translate(50vw, 50vh) rotate(360deg); }
   }
 }
