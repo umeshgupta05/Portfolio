@@ -35,12 +35,14 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden bg-black">
-      {/* Stars Animation */}
+    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden bg-background">
+      {/* Space Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="stars-1"></div>
         <div className="stars-2"></div>
         <div className="stars-3"></div>
+        <div className="planet" style={{ top: '10%', right: '15%' }}></div>
+        <div className="rocket"></div>
       </div>
 
       <motion.div
