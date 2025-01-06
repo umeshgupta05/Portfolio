@@ -117,4 +117,40 @@
       background-position: 0% 50%;
     }
   }
+
+  .stars-1 {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff;
+    animation: animStar 50s linear infinite;
+  }
+
+  .stars-2 {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff;
+    animation: animStar 100s linear infinite;
+  }
+
+  .stars-3 {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff;
+    animation: animStar 150s linear infinite;
+  }
+
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
 }
