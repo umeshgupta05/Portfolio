@@ -5,7 +5,7 @@
     height: 2px;
     background: transparent;
     box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff,
-    1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff; /* Added more stars */
+    1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff; /* Added more stars */
     animation: animStar 50s linear infinite;
   }
 
@@ -15,7 +15,7 @@
     height: 3px;
     background: transparent;
     box-shadow: 1124px 522px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff,
-    1124px 522px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff; /* Added more stars */
+    1124px 522px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff; /* Added more stars */
     animation: animStar 100s linear infinite;
   }
 
@@ -25,7 +25,7 @@
     height: 4px;
     background: transparent;
     box-shadow: 1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff,1702px 1846px #fff,1892px 737px #fff,1164px 1425px #fff,1478px 1218px #fff,1542px 1426px #fff,1010px 782px #fff,1460px 1248px #fff,692px 1518px #fff,902px 47px #fff,
-    1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff; /* Added more stars */
+    1744px 122px #fff,134px 1321px #fff,1882px 812px #fff,821px 1760px #fff,571px 1558px #fff,1580px 606px #fff; /* Added more stars */
     animation: animStar 150s linear infinite;
   }
 
@@ -55,6 +55,24 @@
     animation: orbitSatellite 40s linear infinite;
   }
 
+  .ufo {
+    position: fixed;
+    width: 50px;
+    height: 25px;
+    background: radial-gradient(ellipse at center, #fff 0%, #888 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: floatUFO 25s linear infinite;
+  }
+
+  .shooting-star {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, #fff, transparent);
+    animation: shootingStar 10s linear infinite;
+  }
+
   @keyframes animStar {
     from { transform: translateY(0); }
     to { transform: translateY(-2000px); }
@@ -73,5 +91,23 @@
   @keyframes orbitSatellite {
     0% { transform: translate(-50vw, -50vh) rotate(0deg); }
     100% { transform: translate(50vw, 50vh) rotate(360deg); }
+  }
+
+  @keyframes floatUFO {
+    0% { transform: translate(-100vw, 50vh); }
+    100% { transform: translate(100vw, -30vh); }
+  }
+
+  @keyframes shootingStar {
+    0% { 
+      transform: translate(-100vw, -100vh) rotate(45deg);
+      opacity: 1;
+    }
+    20% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { 
+      transform: translate(100vw, 100vh) rotate(45deg);
+      opacity: 0;
+    }
   }
 }
