@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FileText, Briefcase, GraduationCap } from "lucide-react";
 
-export const Experience = () => {
   const experiences = [
     {
       title: "Math Tutor",
@@ -26,6 +25,7 @@ export const Experience = () => {
     cgpa: "9.49/10.0",
   };
 
+export const Experience = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,8 +49,13 @@ export const Experience = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-white" id="experience">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-4 bg-black text-white relative overflow-hidden" id="experience">
+      <div className="absolute inset-0 opacity-20">
+        <div className="stars-1"></div>
+        <div className="stars-2"></div>
+        <div className="stars-3"></div>
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
