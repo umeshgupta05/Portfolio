@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Briefcase, GraduationCap, Award } from "lucide-react";
+import { FileText, Briefcase, GraduationCap } from "lucide-react";
 
 export const Experience = () => {
   const experiences = [
@@ -25,27 +25,6 @@ export const Experience = () => {
     duration: "2021 - 2025",
     cgpa: "9.49/10.0",
   };
-
-  const certifications = [
-    {
-      title: "AWS Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      date: "August 2023",
-      credentialId: "AWS-123456",
-    },
-    {
-      title: "IBM AI Engineering Professional Certificate",
-      issuer: "IBM",
-      date: "July 2023",
-      credentialId: "IBM-789012",
-    },
-    {
-      title: "Machine Learning Specialization",
-      issuer: "DeepLearning.AI",
-      date: "June 2023",
-      credentialId: "DL-345678",
-    },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -156,42 +135,6 @@ export const Experience = () => {
             />
           </motion.div>
         </div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="mt-16"
-        >
-          <motion.h3
-            variants={itemVariants}
-            className="text-2xl font-bold mb-8 text-center"
-          >
-            Certifications
-          </motion.h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="p-6 rounded-lg border border-border hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 p-2 bg-terra/10 rounded-lg">
-                    <Award className="w-6 h-6 text-terra" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold">{cert.title}</h4>
-                    <p className="text-sage">{cert.issuer}</p>
-                    <p className="text-sm text-muted-foreground">{cert.date}</p>
-                    <p className="text-xs text-muted-foreground">ID: {cert.credentialId}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
