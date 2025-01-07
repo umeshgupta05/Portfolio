@@ -13,7 +13,7 @@ const Index = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="min-h-screen relative bg-white"
+      className="min-h-screen relative bg-background"
     >
       <div className="relative z-10">
         <Hero />
