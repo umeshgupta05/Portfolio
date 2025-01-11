@@ -1,29 +1,29 @@
 import { motion } from "framer-motion";
 import { FileText, Briefcase, GraduationCap } from "lucide-react";
 
-  const experiences = [
-    {
-      title: "Math Tutor",
-      company: "Outlier.ai",
-      duration: "June 2023 - Present",
-      description: "Tutored students in advanced mathematics, focusing on calculus and linear algebra. Maintained a 95% student satisfaction rate.",
-      icon: <Briefcase className="w-6 h-6" />,
-    },
-    {
-      title: "AI & Cloud Intern",
-      company: "Edunet Foundation",
-      duration: "May 2023 - July 2023",
-      description: "Developed and deployed AI models on cloud platforms. Worked with cutting-edge technologies in machine learning and cloud computing.",
-      icon: <Briefcase className="w-6 h-6" />,
-    },
-  ];
+const experiences = [
+  {
+    title: "Math Tutor",
+    company: "Outlier.ai",
+    duration: "November 2024 - Present",
+    description: "Assisted in testing AI models' responses to basic mathematical problems and logical reasoning tasks.",
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    title: "AI & Cloud Intern",
+    company: "Edunet Foundation - AICTE Virtual Internship",
+    duration: "July 2024 - August 2024",
+    description: "Built a cardiovascular risk assessment tool using IBM Watson with foundational machine learning models.",
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+];
 
-  const education = {
-    degree: "B.Tech in Computer Science",
-    institution: "Velagapudi Ramakrishna Siddhartha Engineering College",
-    duration: "2021 - 2025",
-    cgpa: "9.49/10.0",
-  };
+const education = {
+  degree: "B.Tech in Computer Science and Engineering",
+  institution: "Velagapudi Ramakrishna Siddhartha Engineering College",
+  duration: "2022 - Present",
+  cgpa: "9.49/10.0",
+};
 
 export const Experience = () => {
   const containerVariants = {
