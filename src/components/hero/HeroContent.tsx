@@ -2,16 +2,19 @@ import { motion } from "framer-motion";
 import { InterestsText } from "./InterestsText";
 
 export const HeroContent = () => {
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
+  const sentence = "Hi, I'm Umesh Gupta Pedamallu";
+  const subtitle = "Computer Science Student";
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
       opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.3,
-        duration: 0.8,
-        ease: [0.43, 0.13, 0.23, 0.96]
-      }
+      transition: { staggerChildren: 0.08, delayChildren: 0.5 * i }
     })
   };
 
@@ -23,30 +26,58 @@ export const HeroContent = () => {
     >
       <motion.span
         custom={0}
-        variants={textVariants}
+        variants={containerVariants}
         className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10"
       >
         Welcome to my portfolio
       </motion.span>
-      <motion.h1
-        custom={1}
-        variants={textVariants}
-        className="text-4xl md:text-6xl font-bold mb-6 text-white"
-      >
-        Hi, I'm <span className="text-terra">Umesh Gupta Pedamallu</span>
-        <br />
-        <span className="text-terra">Computer Science Student</span>
+      
+      <motion.h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="overflow-hidden"
+        >
+          {sentence.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterVariants}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          custom={2}
+          className="text-terra"
+        >
+          {subtitle.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterVariants}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.div>
       </motion.h1>
+
       <motion.p
-        custom={2}
-        variants={textVariants}
+        custom={3}
+        variants={containerVariants}
         className="text-gray-300 text-lg md:text-xl mb-4"
       >
         A passionate developer with expertise in AI, Web Development, and Cloud Technologies.
       </motion.p>
       <motion.p
-        custom={3}
-        variants={textVariants}
+        custom={4}
+        variants={containerVariants}
         className="text-gray-300 text-lg md:text-xl mb-8"
       >
         Currently interested in: <InterestsText />
@@ -57,8 +88,8 @@ export const HeroContent = () => {
         rel="noopener noreferrer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        custom={3}
-        variants={textVariants}
+        custom={5}
+        variants={containerVariants}
         className="bg-sage text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-sage-light transition-colors duration-300 inline-block"
       >
         View My Resume

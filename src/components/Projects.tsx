@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Code, Rocket, Cpu, ShoppingCart } from "lucide-react";
 
 const projects = [
   {
@@ -44,72 +44,58 @@ const projects = [
   },
 ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3
     }
-  };
+  }
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.43, 0.13, 0.23, 0.96]
-      }
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.43, 0.13, 0.23, 0.96]
     }
-  };
+  }
+};
 
-  const imageVariants = {
-    rest: {
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        type: "tween",
-        ease: "easeOut"
-      }
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.5,
-        type: "tween",
-        ease: "easeOut"
-      }
+const imageVariants = {
+  rest: {
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      type: "tween",
+      ease: "easeOut"
     }
-  };
+  },
+  hover: {
+    scale: 1.05,
+    transition: {
+      duration: 0.5,
+      type: "tween",
+      ease: "easeOut"
+    }
+  }
+};
 
 export const Projects = () => {
   return (
     <section className="py-20 px-4" id="projects">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="text-center mb-16"
-        >
-          <motion.span
-            variants={itemVariants}
-            className="text-terra inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-terra/10"
-          >
-            Portfolio
-          </motion.span>
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6"
-          >
-            Featured Projects
-          </motion.h2>
-        </motion.div>
-
+        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+          <Code className="absolute top-1/4 left-1/4 w-16 h-16 text-sage/10 transform -rotate-12" />
+          <Rocket className="absolute top-1/3 right-1/4 w-20 h-20 text-terra/10 transform rotate-12" />
+          <Cpu className="absolute bottom-1/4 left-1/3 w-24 h-24 text-sage/10 transform -rotate-6" />
+          <ShoppingCart className="absolute bottom-1/3 right-1/3 w-16 h-16 text-terra/10 transform rotate-12" />
+        </div>
+        
         <motion.div
           variants={containerVariants}
           initial="hidden"

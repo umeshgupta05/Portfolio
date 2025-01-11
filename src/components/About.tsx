@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Heart, Coffee } from "lucide-react";
+import { GraduationCap, Heart, Coffee, Book, Brain, User } from "lucide-react";
 
 export const About = () => {
   return (
@@ -12,14 +12,13 @@ export const About = () => {
         }}
       />
       <div 
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2000&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.05
-        }}
-      />
+        className="absolute inset-0 -z-10 flex items-center justify-center"
+      >
+        <Book className="absolute top-1/4 left-1/4 w-16 h-16 text-sage/10 transform -rotate-12" />
+        <Brain className="absolute top-1/3 right-1/4 w-20 h-20 text-terra/10 transform rotate-12" />
+        <User className="absolute bottom-1/4 left-1/3 w-24 h-24 text-sage/10 transform -rotate-6" />
+      </div>
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +75,7 @@ export const About = () => {
               >
                 <item.icon className={`w-6 h-6 text-${item.color}`} />
               </motion.div>
-              <h3 className={`text-xl font-semibold mb-3 text-center text-${item.color}`}>
+              <h3 className={`text-xl font-semibold mb-3 text-${item.color}`}>
                 {item.title}
               </h3>
               <p className="text-muted-foreground text-center hover:text-foreground transition-colors">
