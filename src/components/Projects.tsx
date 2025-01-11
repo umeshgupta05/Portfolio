@@ -34,9 +34,9 @@ const projects = [
   },
   {
     title: "Smart Stick for Visually Impaired Persons",
-    description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors, GPS tracking, and voice feedback.",
+    description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors and variable vibration intensity based on obstacle distance.",
     image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
-    tech: ["IoT", "Arduino", "GPS", "Ultrasonic Sensors"],
+    tech: ["IoT", "Arduino", "Ultrasonic Sensors"],
     links: {
       github: "https://github.com/umeshgupta05/smart-stick",
       live: "#",
