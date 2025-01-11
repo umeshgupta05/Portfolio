@@ -33,12 +33,12 @@ const projects = [
     },
   },
   {
-    title: "MediPlant: Medical Plant Detection Platform",
-    description: "A comprehensive platform for medical students featuring plant detection AI, discussions, blogs, and research paper collaboration. Includes authentication, real-time plant detection, and community features.",
-    image: "/lovable-uploads/b6169754-be5f-4e39-a499-46411fafd161.png",
-    tech: ["React.js", "Machine Learning", "Node.js", "MongoDB"],
+    title: "Smart Stick for Visually Impaired Persons",
+    description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors, GPS tracking, and voice feedback.",
+    image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
+    tech: ["IoT", "Arduino", "GPS", "Ultrasonic Sensors"],
     links: {
-      github: "https://github.com/umeshgupta05/mediplant",
+      github: "https://github.com/umeshgupta05/smart-stick",
       live: "#",
     },
   },
