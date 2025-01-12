@@ -90,10 +90,10 @@ export const Projects = () => {
     <section className="py-20 px-4" id="projects">
       <div className="max-w-6xl mx-auto">
         <div className="absolute inset-0 -z-10 flex items-center justify-center">
-          <Code className="absolute top-1/4 left-1/4 w-16 h-16 text-sage/10 transform -rotate-12" />
-          <Rocket className="absolute top-1/3 right-1/4 w-20 h-20 text-terra/10 transform rotate-12" />
-          <Cpu className="absolute bottom-1/4 left-1/3 w-24 h-24 text-sage/10 transform -rotate-6" />
-          <ShoppingCart className="absolute bottom-1/3 right-1/3 w-16 h-16 text-terra/10 transform rotate-12" />
+          <Code className="absolute top-1/4 left-1/4 w-16 h-16 text-primary/10 transform -rotate-12" />
+          <Rocket className="absolute top-1/3 right-1/4 w-20 h-20 text-secondary/10 transform rotate-12" />
+          <Cpu className="absolute bottom-1/4 left-1/3 w-24 h-24 text-accent/10 transform -rotate-6" />
+          <ShoppingCart className="absolute bottom-1/3 right-1/3 w-16 h-16 text-primary/10 transform rotate-12" />
         </div>
         
         <motion.div
@@ -107,7 +107,7 @@ export const Projects = () => {
             <motion.div
               key={project.title}
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-2xl bg-white/50 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all"
+              className="group relative overflow-hidden rounded-2xl bg-neutral-light/5 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all"
             >
               <motion.div
                 initial="rest"
@@ -123,13 +123,13 @@ export const Projects = () => {
                 />
               </motion.div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-primary">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm bg-sage/10 text-sage rounded-full"
+                      className="px-3 py-1 text-sm bg-secondary/10 text-secondary rounded-full"
                     >
                       {tech}
                     </span>
@@ -139,7 +139,7 @@ export const Projects = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.github}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Github className="w-5 h-5" />
                     <span>Code</span>
@@ -147,7 +147,7 @@ export const Projects = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.live}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors"
                   >
                     <ExternalLink className="w-5 h-5" />
                     <span>Live Demo</span>

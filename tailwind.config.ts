@@ -24,37 +24,25 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        sage: {
-          DEFAULT: "#8BA888",
-          light: "#A3B9A0",
-        },
-        terra: {
-          DEFAULT: "#E2725B",
-          light: "#E89480",
-        },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#9b87f5",
+          light: "#E5DEFF",
+          dark: "#7E69AB",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#33C3F0",
+          light: "#D3E4FD",
+          dark: "#1EAEDB",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+        neutral: {
+          DEFAULT: "#8E9196",
+          light: "#F1F0FB",
+          dark: "#222222",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "#D946EF",
+          light: "#FFDEE2",
+          dark: "#8B5CF6",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
