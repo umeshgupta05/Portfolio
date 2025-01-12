@@ -8,7 +8,7 @@ const projects = [
     image: "/lovable-uploads/7900aada-266f-4c47-9bfc-cc9b56387ae4.png",
     tech: ["Python", "OpenCV", "PyMySQL"],
     links: {
-      github: "https://github.com/umeshgupta05/attendance-management",
+      github: "https://github.com/umeshgupta05/Attendence-Management-System-Using-Face-Recognition",
       live: "#",
     },
   },
@@ -18,7 +18,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     tech: ["Python", "Transformers", "NLP"],
     links: {
-      github: "https://github.com/umeshgupta05/smart-summarizer",
+      github: "https://github.com/umeshgupta05/Smart-Summarizer",
       live: "#",
     },
   },
@@ -28,7 +28,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
     tech: ["React.js", "Node.js", "JavaScript"],
     links: {
-      github: "https://github.com/umeshgupta05/retail-edge",
+      github: "https://github.com/umeshgupta05/Walmart-Sparkathon",
       live: "#",
     },
   },
