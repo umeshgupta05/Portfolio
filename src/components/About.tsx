@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Heart, Coffee, Book, Brain, User } from "lucide-react";
+import { GraduationCap, Heart, Coffee } from "lucide-react";
 
 export const About = () => {
   return (
@@ -11,23 +11,16 @@ export const About = () => {
           opacity: 0.05
         }}
       />
-      <div 
-        className="absolute inset-0 -z-10 flex items-center justify-center"
-      >
-        <Book className="absolute top-1/4 left-1/4 w-16 h-16 text-sage/10 transform -rotate-12" />
-        <Brain className="absolute top-1/3 right-1/4 w-20 h-20 text-terra/10 transform rotate-12" />
-        <User className="absolute bottom-1/4 left-1/3 w-24 h-24 text-sage/10 transform -rotate-6" />
-      </div>
 
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
-          <span className="text-terra inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-terra/10 hover:bg-terra/20 transition-colors">
+          <span className="text-terra inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-terra/10">
             About Me
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-sage to-terra bg-clip-text text-transparent">
@@ -64,21 +57,16 @@ export const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ y: -5 }}
+              transition={{ duration: 0.4 }}
               className="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <motion.div 
-                className={`w-12 h-12 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4 mx-auto`}
-                whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className={`w-12 h-12 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4 mx-auto`}>
                 <item.icon className={`w-6 h-6 text-${item.color}`} />
-              </motion.div>
+              </div>
               <h3 className={`text-xl font-semibold mb-3 text-${item.color}`}>
                 {item.title}
               </h3>
-              <p className="text-muted-foreground text-center hover:text-foreground transition-colors">
+              <p className="text-muted-foreground text-center">
                 {item.description}
               </p>
             </motion.div>
