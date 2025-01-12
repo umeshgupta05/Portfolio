@@ -6,6 +6,7 @@ import { Experience } from "@/components/Experience";
 import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { SolarSystem } from "@/components/SolarSystem";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
       transition={{ duration: 0.6 }}
       className="min-h-screen relative bg-background"
     >
+      <SolarSystem />
       <div className="relative z-10">
         <Hero />
         <About />

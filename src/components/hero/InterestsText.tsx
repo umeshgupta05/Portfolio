@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const InterestsText = () => {
   const [currentText, setCurrentText] = useState("");
@@ -21,6 +21,26 @@ export const InterestsText = () => {
   }, [currentIndex, interests]);
 
   return (
-    <span className="text-terra">{currentText}</span>
+    <span className="text-terra inline-flex">
+      <AnimatePresence mode="wait">
+        <motion.span key={currentText} className="inline-flex">
+          {currentText.split("").map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.05,
+                ease: "easeInOut"
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </motion.span>
+      </AnimatePresence>
+    </span>
   );
 };
