@@ -15,7 +15,15 @@ export const HeroContent = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="text-center max-w-3xl mx-auto z-10 bg-white/5 backdrop-blur-[2px] p-8 rounded-2xl"
+      className="text-center max-w-3xl mx-auto z-10 p-8 rounded-2xl relative" // Add relative positioning
+      style={{
+        backgroundImage: 'url(/path-to-your-image.jpg)', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        height: '100vh', // Ensure the component takes full height of the viewport
+      }}
     >
       <motion.span
         initial={{ opacity: 0 }}
