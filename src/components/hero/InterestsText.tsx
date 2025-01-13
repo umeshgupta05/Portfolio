@@ -14,7 +14,7 @@ export const InterestsText = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % interests.length);
-      setCurrentText(interests[(currentIndex + 1) % interests.length]);
+      setCurrentText(interests[currentIndex]);
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -23,28 +23,32 @@ export const InterestsText = () => {
   return (
     <span className="text-terra inline-flex">
       <AnimatePresence mode="wait">
-        <motion.span
-          key={currentText}
-          className="inline-flex"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-            staggerChildren: 0.1
-          }}
-        >
+        <motion.span key={currentText} className="inline-flex">
           {currentText.split("").map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.05,
-                ease: "easeInOut"
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                transition: {
+                  duration: 0.4,
+                  ease: "easeOut",
+                },
+              }}
+              exit={{
+                opacity: 0,
+                y: -20,
+                scale: 1.2,
+                transition: {
+                  duration: 0.3,
+                  ease: "easeIn",
+                },
+              }}
+              style={{
+                display: "inline-block",
+                position: "relative",
               }}
             >
               {letter}
