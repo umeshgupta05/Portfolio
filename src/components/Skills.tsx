@@ -83,7 +83,7 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-sage/5" id="skills">
+    <section className="py-20 px-4 bg-background/80 backdrop-blur-sm" id="skills">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"

@@ -48,7 +48,7 @@ export const Certifications = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-black text-white" id="certifications">
+    <section className="py-20 px-4 bg-background/80 backdrop-blur-sm" id="certifications">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
