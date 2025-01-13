@@ -83,7 +83,7 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-background/5 backdrop-blur-sm" id="skills">
+    <section className="py-20 px-4 bg-transparent" id="skills">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -133,7 +133,7 @@ export const Skills = () => {
                       key={skill.name}
                       variants={skillVariants}
                       whileHover={{ scale: 1.05 }}
-                      className="p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
+                      className="p-4 bg-white/[0.02] backdrop-blur-[2px] rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
                     >
                       <div className="flex flex-col items-center gap-3">
                         <img 

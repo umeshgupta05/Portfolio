@@ -2,9 +2,6 @@ import { motion } from "framer-motion";
 import { InterestsText } from "./InterestsText";
 
 export const HeroContent = () => {
-  const sentence = "Hi, I'm Umesh Gupta Pedamallu";
-  const subtitle = "Computer Science Student";
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -18,7 +15,7 @@ export const HeroContent = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="text-center max-w-3xl mx-auto z-10 backdrop-blur-sm bg-white/5 p-8 rounded-2xl"
+      className="text-center max-w-3xl mx-auto z-10 bg-white/5 backdrop-blur-[2px] p-8 rounded-2xl"
     >
       <motion.span
         initial={{ opacity: 0 }}
@@ -35,8 +32,8 @@ export const HeroContent = () => {
         transition={{ duration: 0.5 }}
         className="text-4xl md:text-6xl font-bold mb-6 text-white"
       >
-        <div>{sentence}</div>
-        <div className="text-terra">{subtitle}</div>
+        <div>Hi, I'm Umesh Gupta Pedamallu</div>
+        <div className="text-terra">Computer Science Student</div>
       </motion.h1>
 
       <motion.p

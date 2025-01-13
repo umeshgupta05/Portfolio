@@ -48,7 +48,7 @@ export const Certifications = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-background/5 backdrop-blur-sm" id="certifications">
+    <section className="py-20 px-4 bg-transparent" id="certifications">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -82,7 +82,7 @@ export const Certifications = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-white/5 backdrop-blur-sm"
+              className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-white/[0.02] backdrop-blur-[2px]"
             >
               <div className="mt-1 p-2 bg-sage/10 rounded-lg">
                 <Award className="w-6 h-6 text-sage" />
