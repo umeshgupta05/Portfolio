@@ -23,6 +23,41 @@ export const Certifications = () => {
       issuer: "AWS Academy",
       description: "Fundamental understanding of AWS cloud services and architecture",
     },
+    {
+      title: "Java Basic Certification",
+      issuer: "Hackerrank",
+      description: "Solid foundation in Java programming with essential skills and knowledge",
+    },
+    {
+      title: "Programming in Modern C++",
+      issuer: "NPTEL",
+      description: "Advanced concepts and practices in modern C++ programming",
+    },
+    {
+      title: "Python Essentials",
+      issuer: "Cisco Networking Academy",
+      description: "Fundamentals of Python programming for real-world applications",
+    },
+    {
+      title: "Salesforce Certified AI Associate",
+      issuer: "Salesforce",
+      description: "Acquired skills in AI and machine learning with Salesforce tools",
+    },
+    {
+      title: "Introduction to Networks",
+      issuer: "Cisco Networking Academy",
+      description: "In-depth understanding of networking principles and protocols",
+    },
+    {
+      title: "Foundation of R Software",
+      issuer: "NPTEL",
+      description: "Introduction to R programming for data analysis and statistical modeling",
+    },
+    {
+      title: "SQL Intermediate Certification",
+      issuer: "Hackerrank",
+      description: "Intermediate level SQL knowledge, including queries, joins, and data manipulation",
+    },
   ];
 
   const containerVariants = {
