@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Heart, Coffee } from "lucide-react";
+import { GraduationCap, Heart, Coffee, CheckCircle } from "lucide-react";
 
 export const About = () => {
   return (
@@ -28,7 +28,8 @@ export const About = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        {/* Education and Experience Section */}
+        <div className="flex justify-between gap-8">
           {[{
             icon: GraduationCap,
             title: "Education",
@@ -50,7 +51,7 @@ export const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="p-6 rounded-2xl bg-neutral-light/5 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all duration-300 mx-auto"
+              className="p-6 rounded-2xl bg-neutral-light/5 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-xs mx-auto"
             >
               <div className={`w-12 h-12 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4 mx-auto`}>
                 <item.icon className={`w-6 h-6 text-${item.color}`} />
@@ -77,13 +78,23 @@ export const About = () => {
             <Coffee className="w-6 h-6 text-accent" />
           </div>
           <h3 className="text-xl font-semibold mb-3 text-accent text-center">Achievements</h3>
-          <p className="text-muted-foreground text-center">
-            <p> Top 2% in NPTEL Programming in Modern C++ and R Software certification exams</p>
-            <p> Led team to top 3 position in SIH Internal Hackathon 2024</p>
-            <p> Solved 300+ algorithmic problems on LeetCode; participated in 30+ competitive coding contests</p>
-            <p> Winner of two consecutive coding events organized by the ACM chapter of my university, showcasing problem-solving and programming skills</p>
-            <p> Awarded Rs 50,000 Merit Scholarship by Reliance Foundation for exceptional academic performance</p>
-          </p>
+          <div className="text-muted-foreground text-center">
+            <p className="flex items-center gap-2">
+              <CheckCircle className="text-accent w-5 h-5" /> Top 2% in NPTEL Programming in Modern C++ and R Software certification exams
+            </p>
+            <p className="flex items-center gap-2">
+              <CheckCircle className="text-accent w-5 h-5" /> Led team to top 3 position in SIH Internal Hackathon 2024
+            </p>
+            <p className="flex items-center gap-2">
+              <CheckCircle className="text-accent w-5 h-5" /> Solved 300+ algorithmic problems on LeetCode; participated in 30+ competitive coding contests
+            </p>
+            <p className="flex items-center gap-2">
+              <CheckCircle className="text-accent w-5 h-5" /> Winner of two consecutive coding events organized by the ACM chapter of my university, showcasing problem-solving and programming skills
+            </p>
+            <p className="flex items-center gap-2">
+              <CheckCircle className="text-accent w-5 h-5" /> Awarded Rs 50,000 Merit Scholarship by Reliance Foundation for exceptional academic performance
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
