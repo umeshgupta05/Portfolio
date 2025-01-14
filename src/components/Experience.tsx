@@ -88,13 +88,13 @@ export const Experience = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex justify-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="space-y-8"
+            className="space-y-8 max-w-4xl w-full"
           >
             <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
               <GraduationCap className="w-8 h-8 text-sage" />
