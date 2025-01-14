@@ -8,7 +8,7 @@ export const About = () => {
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage: `linear-gradient(to right, #243949 0%, #517fa4 100%)`,
-          opacity: 0.05
+          opacity: 0.02
         }}
       />
 

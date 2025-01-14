@@ -17,7 +17,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="py-20 px-4" id="contact">
+    <section className="py-20 px-4 bg-transparent" id="contact">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export const Contact = () => {
                 setFormData({ ...formData, name: e.target.value })
               }
               required
-              className="w-full px-4 py-2 rounded-lg border border-border bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
+              className="w-full px-4 py-2 rounded-lg border border-border bg-white/[0.02] backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
             />
           </div>
           <div>
@@ -67,7 +67,7 @@ export const Contact = () => {
                 setFormData({ ...formData, email: e.target.value })
               }
               required
-              className="w-full px-4 py-2 rounded-lg border border-border bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
+              className="w-full px-4 py-2 rounded-lg border border-border bg-white/[0.02] backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
             />
           </div>
           <div>
@@ -82,7 +82,7 @@ export const Contact = () => {
               }
               required
               rows={4}
-              className="w-full px-4 py-2 rounded-lg border border-border bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
+              className="w-full px-4 py-2 rounded-lg border border-border bg-white/[0.02] backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
             />
           </div>
           <motion.button

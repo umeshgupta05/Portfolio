@@ -4,7 +4,7 @@ import { HeroContent } from "./hero/HeroContent";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden bg-background/80 backdrop-blur-sm">
+    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden bg-transparent">
       <HeroContent />
       <motion.div
         initial={{ opacity: 0 }}

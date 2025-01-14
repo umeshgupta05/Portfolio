@@ -87,9 +87,9 @@ const imageVariants = {
 
 export const Projects = () => {
   return (
-    <section className="py-20 px-4" id="projects">
+    <section className="py-20 px-4 bg-transparent" id="projects">
       <div className="max-w-6xl mx-auto">
-        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+        <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-5">
           <Code className="absolute top-1/4 left-1/4 w-16 h-16 text-primary/10 transform -rotate-12" />
           <Rocket className="absolute top-1/3 right-1/4 w-20 h-20 text-secondary/10 transform rotate-12" />
           <Cpu className="absolute bottom-1/4 left-1/3 w-24 h-24 text-accent/10 transform -rotate-6" />
@@ -107,7 +107,7 @@ export const Projects = () => {
             <motion.div
               key={project.title}
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-2xl bg-neutral-light/5 backdrop-blur-sm border border-border shadow-sm hover:shadow-md transition-all"
+              className="group relative overflow-hidden rounded-2xl bg-white/[0.02] backdrop-blur-[2px] border border-border shadow-sm hover:shadow-md transition-all"
             >
               <motion.div
                 initial="rest"

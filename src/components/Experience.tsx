@@ -49,8 +49,8 @@ export const Experience = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-black text-white relative overflow-hidden" id="experience">
-      <div className="absolute inset-0 opacity-20">
+    <section className="py-20 px-4 relative overflow-hidden" id="experience">
+      <div className="absolute inset-0 opacity-10">
         <div className="stars-1"></div>
         <div className="stars-2"></div>
         <div className="stars-3"></div>
