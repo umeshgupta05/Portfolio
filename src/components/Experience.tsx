@@ -49,7 +49,7 @@ export const Experience = () => {
   };
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden" id="experience">
+    <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
       <div className="absolute inset-0 opacity-10">
         <div className="stars-1"></div>
         <div className="stars-2"></div>
@@ -100,7 +100,7 @@ export const Experience = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow"
+                className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-background/10 backdrop-blur-sm"
               >
                 <div className="mt-1 p-2 bg-sage/10 rounded-lg">
                   {exp.icon}
@@ -120,24 +120,37 @@ export const Experience = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="relative h-[600px] rounded-lg overflow-hidden border border-border shadow-lg"
+            className="relative rounded-lg overflow-hidden border border-border shadow-lg bg-background/10 backdrop-blur-sm"
           >
             <motion.div variants={itemVariants} className="absolute top-4 right-4 z-10">
               <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-sage text-white rounded-lg hover:bg-sage-light transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-sage/80 text-white rounded-lg hover:bg-sage transition-colors"
               >
                 <FileText className="w-4 h-4" />
                 Download Resume
               </a>
             </motion.div>
-            <iframe
-              src="/resume.pdf"
-              className="w-full h-full"
-              title="Resume Preview"
-            />
+            <object
+              data="/resume.pdf"
+              type="application/pdf"
+              className="w-full h-[600px]"
+            >
+              <p>
+                Unable to display PDF file.{" "}
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage hover:underline"
+                >
+                  Download
+                </a>{" "}
+                instead.
+              </p>
+            </object>
           </motion.div>
         </div>
       </div>
