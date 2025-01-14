@@ -29,28 +29,34 @@ export const About = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: GraduationCap,
-              title: "Education",
-              description:
-                "B.Tech in Computer Science from Velagapudi Ramakrishna Siddhartha Engineering College with 9.49 CGPA",
-              color: "primary"
-            },
-            {
-              icon: Heart,
-              title: "Experience",
-              description:
-                "Math Tutor at Outlier.ai and AI & Cloud Intern at Edunet Foundation, working on AI models and cloud solutions",
-              color: "secondary"
-            },
-            {
-              icon: Coffee,
-              title: "Achievements",
-              description:
-                "Top 2% in NPTEL C++, Rs 50,000 Merit Scholarship, 300+ LeetCode problems solved",
-              color: "accent"
-            },
+          {[{
+            icon: GraduationCap,
+            title: "Education",
+            description:
+              "B.Tech in Computer Science from Velagapudi Ramakrishna Siddhartha Engineering College with 9.49 CGPA",
+            color: "primary"
+          },
+          {
+            icon: Heart,
+            title: "Experience",
+            description:
+              "Math Tutor at Outlier.ai and AI & Cloud Intern at Edunet Foundation, working on AI models and cloud solutions",
+            color: "secondary"
+          },
+          {
+            icon: Coffee,
+            title: "Achievements",
+            description: (
+              <>
+                <p>• Top 2% in NPTEL Programming in Modern C++ and R Software certification exams</p>
+                <p>• Led team to top 3 position in SIH Internal Hackathon 2024</p>
+                <p>• Solved 300+ algorithmic problems on LeetCode; participated in 30+ competitive coding contests</p>
+                <p>• Winner of two consecutive coding events organized by the ACM chapter of my university, showcasing problem-solving and programming skills</p>
+                <p>• Awarded Rs 50,000 Merit Scholarship by Reliance Foundation for exceptional academic performance</p>
+              </>
+            ),
+            color: "accent"
+          },
           ].map((item, index) => (
             <motion.div
               key={index}
