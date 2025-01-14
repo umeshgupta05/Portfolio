@@ -1,19 +1,30 @@
 import { motion } from "framer-motion";
-import { FileText, Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap } from "lucide-react";
 
 const experiences = [
   {
     title: "Math Tutor",
     company: "Outlier.ai",
     duration: "November 2024 - Present",
-    description: "Assisted in testing AI models' responses to basic mathematical problems and logical reasoning tasks.",
+    description: (
+      <>
+        <p>• Gained exposure to creating test cases for validating AI model outputs.</p>
+        <p>• Learned the basics of evaluating AI models’ performance for mathematical problem-solving.</p>
+      </>
+    ),
     icon: <Briefcase className="w-6 h-6" />,
   },
   {
     title: "AI & Cloud Intern",
     company: "Edunet Foundation - AICTE Virtual Internship",
     duration: "July 2024 - August 2024",
-    description: "Built a cardiovascular risk assessment tool using IBM Watson with foundational machine learning models.",
+    description: (
+      <>
+        <p>• Built a cardiovascular risk assessment tool using IBM Watson and foundational machine learning models.</p>
+        <p>• Processed health metrics data and developed an intuitive interface for real-time risk prediction.</p>
+        <p>• Gained hands-on experience with IBM Watson, AutoML provided by IBM Cloud for building predictive models.</p>
+      </>
+    ),
     icon: <Briefcase className="w-6 h-6" />,
   },
 ];
@@ -109,48 +120,10 @@ export const Experience = () => {
                   <h3 className="text-xl font-semibold">{exp.title}</h3>
                   <p className="text-terra">{exp.company}</p>
                   <p className="text-sm text-muted-foreground mb-2">{exp.duration}</p>
-                  <p className="text-muted-foreground">{exp.description}</p>
+                  <div className="text-muted-foreground">{exp.description}</div>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="relative rounded-lg overflow-hidden border border-border shadow-lg bg-background/10 backdrop-blur-sm"
-          >
-            <motion.div variants={itemVariants} className="absolute top-4 right-4 z-10">
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-sage/80 text-white rounded-lg hover:bg-sage transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                Download Resume
-              </a>
-            </motion.div>
-            <object
-              data="/resume.pdf"
-              type="application/pdf"
-              className="w-full h-[600px]"
-            >
-              <p>
-                Unable to display PDF file.{" "}
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sage hover:underline"
-                >
-                  Download
-                </a>{" "}
-                instead.
-              </p>
-            </object>
           </motion.div>
         </div>
       </div>
