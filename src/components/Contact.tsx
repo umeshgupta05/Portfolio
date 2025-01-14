@@ -10,9 +10,14 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent successfully!");
+    
+    // Send email using mailto
+    const mailtoLink = `mailto:saiumeshgupta@gmail.com?subject=Portfolio Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
+    window.location.href = mailtoLink;
+    
+    toast.success("Opening your email client!");
     setFormData({ name: "", email: "", message: "" });
   };
 
