@@ -71,10 +71,10 @@ export const Certifications = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 0.5,
         ease: "easeOut",
@@ -90,7 +90,7 @@ export const Certifications = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <motion.span
             variants={itemVariants}
@@ -106,30 +106,30 @@ export const Certifications = () => {
           </motion.h2>
         </motion.div>
 
-        <motion.div
+        <motion.ul
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="grid md:grid-cols-2 gap-6"
+          className="space-y-6"
         >
           {certifications.map((cert, index) => (
-            <motion.div
+            <motion.li
               key={index}
               variants={itemVariants}
-              className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-white/[0.02] backdrop-blur-[2px]"
+              className="flex items-start gap-4"
             >
-              <div className="mt-1 p-2 bg-sage/10 rounded-lg">
+              <div className="mt-1">
                 <Award className="w-6 h-6 text-sage" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold">{cert.title}</h3>
-                <p className="text-terra">{cert.issuer}</p>
-                <p className="text-muted-foreground mt-2">{cert.description}</p>
+                <h3 className="text-lg font-semibold">{cert.title}</h3>
+                <p className="text-sm text-terra">{cert.issuer}</p>
+                <p className="text-sm text-muted-foreground">{cert.description}</p>
               </div>
-            </motion.div>
+            </motion.li>
           ))}
-        </motion.div>
+        </motion.ul>
       </div>
     </section>
   );
