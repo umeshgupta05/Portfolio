@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
     --primary: 252 87% 74%;
     --primary-foreground: 0 0% 98%;
     --secondary: 199 89% 48%;
@@ -39,4 +39,16 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-sm;
 }

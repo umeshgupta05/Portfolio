@@ -16,7 +16,7 @@ const Index = () => {
       transition={{ duration: 0.6 }}
       className="min-h-screen relative"
     >
-      <div className="relative z-10 bg-gradient-to-b from-background/95 to-background/80 backdrop-blur-sm">
+      <div className="relative z-10 bg-white/5 backdrop-blur-[2px]">
         <Hero />
         <About />
         <Experience />
