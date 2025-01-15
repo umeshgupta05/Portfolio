@@ -15,21 +15,13 @@ export const HeroContent = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="text-center max-w-3xl mx-auto z-10 p-8 rounded-2xl relative" // Add relative positioning
-      style={{
-        backgroundImage: 'url(/path-to-your-image.jpg)', // Replace with your image path
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        height: '100vh', // Ensure the component takes full height of the viewport
-      }}
+      className="text-center max-w-3xl mx-auto z-10 p-8 rounded-2xl glass"
     >
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10"
+        className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-6 bg-primary-light text-primary"
       >
         Welcome to my portfolio
       </motion.span>
@@ -38,17 +30,17 @@ export const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl md:text-6xl font-bold mb-6 text-white"
+        className="text-4xl md:text-6xl font-bold mb-6"
       >
-        <div>Hi, I'm Umesh Gupta Pedamallu</div>
-        <div className="text-terra">Computer Science Student</div>
+        <div className="text-primary">Hi, I'm Umesh Gupta Pedamallu</div>
+        <div className="text-secondary mt-2">Computer Science Student</div>
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-gray-300 text-lg md:text-xl mb-4"
+        className="text-neutral text-lg md:text-xl mb-4"
       >
         A passionate developer with expertise in AI, Web Development, and Cloud Technologies.
       </motion.p>
@@ -56,7 +48,7 @@ export const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-gray-300 text-lg md:text-xl mb-8"
+        className="text-neutral text-lg md:text-xl mb-8"
       >
         Currently interested in: <InterestsText />
       </motion.p>
@@ -67,7 +59,9 @@ export const HeroContent = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-sage text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-sage-light transition-colors duration-300 inline-block"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-medium shadow-lg transition-colors duration-300 inline-block"
       >
         View My Resume
       </motion.a>
