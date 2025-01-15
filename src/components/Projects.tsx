@@ -23,12 +23,12 @@ const projects = [
     },
   },
   {
-    title: "RetailEdge: E-Commerce Platform",
+    title: "ShopSphere: E-Commerce Platform",
     description: "A dynamic e-commerce website featuring seamless shopping experience with intelligent product recommendations.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
     tech: ["React.js", "Node.js", "JavaScript"],
     links: {
-      github: "https://github.com/umeshgupta05/Walmart-Sparkathon",
+      github: "https://github.com/umeshgupta05/ShopSphere",
       live: "#",
     },
   },
