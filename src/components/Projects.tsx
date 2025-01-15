@@ -51,7 +51,7 @@ const projects = [
     github: "https://github.com/umeshgupta05/Credit-Card-Fraud-Detection",
     live: "#",
   },
-  
+  },
   {
     title: "Modern Resume Builder",
     description: "A web application to design professional resumes using interactive templates and real-time customization options.",
