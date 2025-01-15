@@ -43,15 +43,15 @@ const projects = [
     },
   },
   {
-    title: "Credit Card Fraud Detection",
-    description: "A machine learning-based project to predict fraudulent credit card transactions with high accuracy using advanced data analysis techniques.",
-    image: "https://images.unsplash.com/photo-1560264418-2c5bf3b21d8a",
-    tech: ["Python", "Scikit-learn", "Pandas"],
-    links: {
-      github: "https://github.com/umeshgupta05/Credit-Card-Fraud-Detection",
-      live: "#",
-    },
+  title: "Credit Card Fraud Detection",
+  description: "A machine learning-based project to predict fraudulent credit card transactions with high accuracy using advanced data analysis techniques.",
+  image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3", // A more relevant Unsplash image for credit card fraud
+  tech: ["Python", "Scikit-learn", "Pandas"],
+  links: {
+    github: "https://github.com/umeshgupta05/Credit-Card-Fraud-Detection",
+    live: "#",
   },
+  
   {
     title: "Modern Resume Builder",
     description: "A web application to design professional resumes using interactive templates and real-time customization options.",
