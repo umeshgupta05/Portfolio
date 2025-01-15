@@ -33,11 +33,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url('/lovable-uploads/54e5895d-c6f1-4ae0-b815-867beb968327.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
