@@ -94,13 +94,13 @@ export const Certifications = () => {
         >
           <motion.span
             variants={itemVariants}
-            className="text-terra inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-terra/10"
+            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
           >
             Certifications
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
           >
             Professional Development
           </motion.h2>
@@ -123,7 +123,7 @@ export const Certifications = () => {
                 <Award className="w-6 h-6 text-sage" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{cert.title}</h3>
+                <h3 className="text-lg font-semibold text-primary">{cert.title}</h3>
                 <p className="text-sm text-terra">{cert.issuer}</p>
                 <p className="text-sm text-muted-foreground">{cert.description}</p>
               </div>

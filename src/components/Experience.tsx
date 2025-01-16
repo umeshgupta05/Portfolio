@@ -76,13 +76,13 @@ export const Experience = () => {
         >
           <motion.span
             variants={itemVariants}
-            className="text-terra inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-terra/10"
+            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
           >
             Experience
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
           >
             Professional Journey
           </motion.h2>
@@ -99,7 +99,7 @@ export const Experience = () => {
             <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
               <GraduationCap className="w-8 h-8 text-sage" />
               <div>
-                <h3 className="text-xl font-semibold">{education.degree}</h3>
+                <h3 className="text-xl font-semibold text-primary">{education.degree}</h3>
                 <p className="text-muted-foreground">{education.institution}</p>
                 <p className="text-sm text-muted-foreground">
                   {education.duration} | CGPA: {education.cgpa}
@@ -117,7 +117,7 @@ export const Experience = () => {
                   {exp.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">{exp.title}</h3>
+                  <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
                   <p className="text-terra">{exp.company}</p>
                   <p className="text-sm text-muted-foreground mb-2">{exp.duration}</p>
                   <div className="text-muted-foreground">{exp.description}</div>

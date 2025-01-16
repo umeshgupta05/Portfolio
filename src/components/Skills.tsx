@@ -92,13 +92,13 @@ export const Skills = () => {
         >
           <motion.span
             variants={skillVariants}
-            className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10"
+            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
           >
             Skills
           </motion.span>
           <motion.h2
             variants={skillVariants}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
           >
             Technical Expertise
           </motion.h2>

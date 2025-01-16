@@ -31,10 +31,10 @@ export const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sage inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-sage/10">
+          <span className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10">
             Contact
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Get in Touch</h2>
         </motion.div>
 
         <motion.form

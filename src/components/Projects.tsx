@@ -43,14 +43,14 @@ const projects = [
     },
   },
   {
-  title: "Credit Card Fraud Detection",
-  description: "A machine learning-based project to predict fraudulent credit card transactions with high accuracy using advanced data analysis techniques.",
-  image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3", // A more relevant Unsplash image for credit card fraud
-  tech: ["Python", "Scikit-learn", "Pandas"],
-  links: {
-    github: "https://github.com/umeshgupta05/Credit-Card-Fraud-Detection",
-    live: "#",
-  },
+    title: "Credit Card Fraud Detection",
+    description: "A machine learning-based project to predict fraudulent credit card transactions with high accuracy using advanced data analysis techniques.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+    tech: ["Python", "Scikit-learn", "Pandas"],
+    links: {
+      github: "https://github.com/umeshgupta05/Credit-Card-Fraud-Detection",
+      live: "#",
+    },
   },
   {
     title: "Modern Resume Builder",
@@ -144,7 +144,7 @@ export const Projects = () => {
               </motion.div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3 text-primary">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-neutral mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
@@ -159,7 +159,7 @@ export const Projects = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.github}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    className="flex items-center gap-2 text-neutral hover:text-primary transition-colors"
                   >
                     <Github className="w-5 h-5" />
                     <span>Code</span>
@@ -167,7 +167,7 @@ export const Projects = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.live}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors"
+                    className="flex items-center gap-2 text-neutral hover:text-secondary transition-colors"
                   >
                     <ExternalLink className="w-5 h-5" />
                     <span>Live Demo</span>
