@@ -23,9 +23,7 @@ const Index = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.15,
-          transform: "rotate(90deg)",
-          transformOrigin: "center"
+          opacity: 0.15
         }}
       />
       <div className="relative z-10 bg-white/10 backdrop-blur-[2px]">
