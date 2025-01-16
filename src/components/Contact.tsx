@@ -94,7 +94,7 @@ export const Contact = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="w-full bg-sage-light text-sage-dark px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-sage-dark hover:text-sage-light transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2"
           >
             <Send className="w-5 h-5" />
             <span>Send Message</span>
