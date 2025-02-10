@@ -74,29 +74,29 @@ export const Experience = () => {
   };
 
   return (
-    <section className="py-16 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
+    <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
       <div className="absolute inset-0 opacity-10">
         <div className="stars-1"></div>
         <div className="stars-2"></div>
         <div className="stars-3"></div>
       </div>
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <motion.span
             variants={itemVariants}
-            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 bg-primary/10"
+            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
           >
             Experience
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-2xl md:text-3xl font-bold mb-4 text-primary"
+            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
           >
             Professional Journey
           </motion.h2>
@@ -108,14 +108,14 @@ export const Experience = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="space-y-6 max-w-3xl w-full"
+            className="space-y-8 max-w-4xl w-full"
           >
-            <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
-              <GraduationCap className="w-7 h-7 text-sage" />
+            <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
+              <GraduationCap className="w-8 h-8 text-sage" />
               <div>
-                <h3 className="text-lg font-semibold text-primary">{education.degree}</h3>
-                <p className="text-sm text-muted-foreground">{education.institution}</p>
-                <p className="text-xs text-muted-foreground">
+                <h3 className="text-xl font-semibold text-primary">{education.degree}</h3>
+                <p className="text-muted-foreground">{education.institution}</p>
+                <p className="text-sm text-muted-foreground">
                   {education.duration} | CGPA: {education.cgpa}
                 </p>
               </div>
@@ -125,16 +125,16 @@ export const Experience = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex items-start gap-3 p-4 rounded-lg border border-border hover:shadow-md transition-shadow bg-background/10 backdrop-blur-sm"
+                className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-background/10 backdrop-blur-sm"
               >
-                <div className="mt-1 p-1.5 bg-sage/10 rounded-lg">
+                <div className="mt-1 p-2 bg-sage/10 rounded-lg">
                   {exp.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-primary">{exp.title}</h3>
-                  <p className="text-sm text-terra">{exp.company}</p>
-                  <p className="text-xs text-muted-foreground mb-1.5">{exp.duration}</p>
-                  <div className="text-sm text-muted-foreground line-clamp-2">{exp.description}</div>
+                  <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
+                  <p className="text-terra">{exp.company}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{exp.duration}</p>
+                  <div className="text-muted-foreground">{exp.description}</div>
                 </div>
               </motion.div>
             ))}
