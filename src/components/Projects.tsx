@@ -108,8 +108,8 @@ const imageVariants = {
 
 export const Projects = () => {
   return (
-    <section className="py-16 px-4 bg-transparent" id="projects">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 px-4 bg-transparent" id="projects">
+      <div className="max-w-6xl mx-auto">
         <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-5">
           <Code className="absolute top-1/4 left-1/4 w-16 h-16 text-primary/10 transform -rotate-12" />
           <Rocket className="absolute top-1/3 right-1/4 w-20 h-20 text-secondary/10 transform rotate-12" />
@@ -122,19 +122,19 @@ export const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid lg:grid-cols-3 md:grid-cols-2 gap-6"
+          className="grid lg:grid-cols-3 md:grid-cols-2 gap-4"
         >
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               variants={itemVariants}
-              className="group relative bg-white/[0.02] backdrop-blur-[2px] border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="group relative bg-white/[0.02] backdrop-blur-[2px] border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
             >
               <motion.div
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
-                className="aspect-video overflow-hidden"
+                className="h-40 overflow-hidden"
               >
                 <motion.img
                   variants={imageVariants}
@@ -143,14 +143,14 @@ export const Projects = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold mb-2 text-primary line-clamp-1">{project.title}</h3>
-                <p className="text-sm text-neutral mb-3 line-clamp-2">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-3">
+              <div className="p-4">
+                <h3 className="text-base font-semibold mb-1.5 text-primary line-clamp-1">{project.title}</h3>
+                <p className="text-xs text-neutral mb-2 line-clamp-2">{project.description}</p>
+                <div className="flex flex-wrap gap-1.5 mb-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded-full"
+                      className="px-2 py-0.5 text-xs bg-secondary/10 text-secondary rounded-full"
                     >
                       {tech}
                     </span>
@@ -160,21 +160,21 @@ export const Projects = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.github}
-                    className="flex items-center gap-1 text-sm text-neutral hover:text-primary transition-colors"
+                    className="flex items-center gap-1 text-xs text-neutral hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="w-4 h-4" />
+                    <Github className="w-3.5 h-3.5" />
                     <span>Code</span>
                   </motion.a>
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.live}
-                    className="flex items-center gap-1 text-sm text-neutral hover:text-secondary transition-colors"
+                    className="flex items-center gap-1 text-xs text-neutral hover:text-secondary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ExternalLink className="w-4 h-4" />
+                    <ExternalLink className="w-3.5 h-3.5" />
                     <span>Live Demo</span>
                   </motion.a>
                 </div>
