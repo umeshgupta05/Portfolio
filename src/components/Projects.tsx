@@ -3,6 +3,36 @@ import { ExternalLink, Github, Code, Rocket, Cpu, ShoppingCart } from "lucide-re
 
 const projects = [
   {
+    title: "Medi Collab",
+    description: "A medical knowledge-sharing platform enabling healthcare professionals to collaborate, share research, and engage in clinical discussions.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
+    tech: ["React.js", "Node.js", "MongoDB", "WebSocket"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
+    title: "Hackathon Management Dashboard (HackHub)",
+    description: "A responsive platform for managing and exploring hackathons, featuring event tracking, real-time notifications, and submission management.",
+    image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0",
+    tech: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
+    title: "SmartPath AI",
+    description: "An AI-powered personalized learning assistant that recommends courses based on user interests, certifications, and quiz performance.",
+    image: "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
+    tech: ["Python", "Machine Learning", "Flask", "React.js"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
     title: "Attendance Management System",
     description: "A face recognition-based system to automate attendance tracking with real-time detection.",
     image: "/lovable-uploads/7900aada-266f-4c47-9bfc-cc9b56387ae4.png",
@@ -23,42 +53,12 @@ const projects = [
     },
   },
   {
-    title: "ShopSphere: E-Commerce Platform",
-    description: "A dynamic e-commerce website featuring seamless shopping experience with intelligent product recommendations.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    tech: ["React.js", "Node.js", "JavaScript"],
-    links: {
-      github: "https://github.com/umeshgupta05/ShopSphere",
-      live: "#",
-    },
-  },
-  {
     title: "Smart Stick for Visually Impaired Persons",
     description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors and variable vibration intensity based on obstacle distance.",
     image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
     tech: ["IoT", "Arduino", "Ultrasonic Sensors"],
     links: {
       github: "https://github.com/umeshgupta05/smart-stick",
-      live: "#",
-    },
-  },
-  {
-    title: "Credit Card Fraud Detection",
-    description: "A machine learning-based project to predict fraudulent credit card transactions with high accuracy using advanced data analysis techniques.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
-    tech: ["Python", "Scikit-learn", "Pandas"],
-    links: {
-      github: "https://github.com/umeshgupta05/Credit-Card-Fraud-Detection",
-      live: "#",
-    },
-  },
-  {
-    title: "Modern Resume Builder",
-    description: "A web application to design professional resumes using interactive templates and real-time customization options.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
-    tech: ["Angular", "CSS"],
-    links: {
-      github: "https://github.com/umeshgupta05/Modern-Resume-Builder",
       live: "#",
     },
   },
