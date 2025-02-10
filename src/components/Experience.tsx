@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
 
@@ -9,7 +10,20 @@ const experiences = [
     description: (
       <>
         <p>• Gained exposure to creating test cases for validating AI model outputs.</p>
-        <p>• Learned the basics of evaluating AI models’ performance for mathematical problem-solving.</p>
+        <p>• Learned the basics of evaluating AI models' performance for mathematical problem-solving.</p>
+      </>
+    ),
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    title: "Android Developer Intern",
+    company: "Eduskills Foundation - AICTE Virtual Internship",
+    duration: "July 2024 - August 2024",
+    description: (
+      <>
+        <p>• Gained hands-on experience in Jetpack Compose, focusing on declarative UI development, state management, and component-based architecture.</p>
+        <p>• Developed an Android application using Jetpack Compose, implementing Material Design, navigation components, and interactive UI elements.</p>
+        <p>• Optimized app performance by leveraging asynchronous programming (Coroutines) and efficient state handling techniques.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,
