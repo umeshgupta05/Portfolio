@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Code, Rocket, Cpu, ShoppingCart } from "lucide-react";
 
@@ -69,7 +70,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3
+      staggerChildren: 0.2
     }
   }
 };
@@ -80,7 +81,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: [0.43, 0.13, 0.23, 0.96]
     }
   }
@@ -107,8 +108,8 @@ const imageVariants = {
 
 export const Projects = () => {
   return (
-    <section className="py-20 px-4 bg-transparent" id="projects">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 px-4 bg-transparent" id="projects">
+      <div className="max-w-7xl mx-auto">
         <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-5">
           <Code className="absolute top-1/4 left-1/4 w-16 h-16 text-primary/10 transform -rotate-12" />
           <Rocket className="absolute top-1/3 right-1/4 w-20 h-20 text-secondary/10 transform rotate-12" />
@@ -121,13 +122,13 @@ export const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid lg:grid-cols-3 md:grid-cols-2 gap-6"
         >
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-2xl bg-white/[0.02] backdrop-blur-[2px] border border-border shadow-sm hover:shadow-md transition-all"
+              className="group relative bg-white/[0.02] backdrop-blur-[2px] border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
             >
               <motion.div
                 initial="rest"
@@ -142,34 +143,38 @@ export const Projects = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-primary">{project.title}</h3>
-                <p className="text-neutral mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="p-5">
+                <h3 className="text-lg font-semibold mb-2 text-primary line-clamp-1">{project.title}</h3>
+                <p className="text-sm text-neutral mb-3 line-clamp-2">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-3">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm bg-secondary/10 text-secondary rounded-full"
+                      className="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded-full"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.github}
-                    className="flex items-center gap-2 text-neutral hover:text-primary transition-colors"
+                    className="flex items-center gap-1 text-sm text-neutral hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Github className="w-5 h-5" />
+                    <Github className="w-4 h-4" />
                     <span>Code</span>
                   </motion.a>
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.live}
-                    className="flex items-center gap-2 text-neutral hover:text-secondary transition-colors"
+                    className="flex items-center gap-1 text-sm text-neutral hover:text-secondary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    <ExternalLink className="w-4 h-4" />
                     <span>Live Demo</span>
                   </motion.a>
                 </div>
