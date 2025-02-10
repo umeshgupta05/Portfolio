@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Code2, Braces, Database, Cloud, Terminal, Wrench } from "lucide-react";
 
@@ -112,18 +113,18 @@ export const Skills = () => {
           className="space-y-12"
         >
           {categories.map((category) => (
-            <div key={category} className="space-y-6">
-              <div className="flex items-center gap-3">
+            <div key={category} className="bg-white/[0.02] backdrop-blur-md rounded-2xl p-6 border border-sage/10">
+              <div className="flex items-center gap-3 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 360 }}
                   transition={{ duration: 0.5 }}
-                  className="text-terra"
+                  className="p-2 rounded-lg bg-primary/10 text-primary"
                 >
                   {getCategoryIcon(category)}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-terra">{category}</h3>
+                <h3 className="text-2xl font-semibold text-primary">{category}</h3>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {skills
                   .filter(skill => skill.category === category)
                   .map((skill) => (
@@ -131,16 +132,16 @@ export const Skills = () => {
                       key={skill.name}
                       variants={skillVariants}
                       whileHover={{ scale: 1.05 }}
-                      className="p-4 bg-white/[0.02] backdrop-blur-[2px] rounded-xl border border-sage/20 shadow-sm hover:shadow-md transition-all duration-300"
+                      className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-sage/10 backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-300"
                     >
-                      <div className="flex flex-col items-center gap-3">
+                      <div className="flex-shrink-0">
                         <img 
                           src={skill.icon} 
                           alt={skill.name} 
-                          className="w-12 h-12 object-contain"
+                          className="w-8 h-8 object-contain"
                         />
-                        <span className="font-medium text-foreground">{skill.name}</span>
                       </div>
+                      <span className="font-medium text-foreground text-sm">{skill.name}</span>
                     </motion.div>
                   ))}
               </div>
