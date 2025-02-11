@@ -21,9 +21,8 @@ const experiences = [
     duration: "July 2024 - August 2024",
     description: (
       <>
-        <p>• Gained hands-on experience in Jetpack Compose, focusing on declarative UI development, state management, and component-based architecture.</p>
-        <p>• Developed an Android application using Jetpack Compose, implementing Material Design, navigation components, and interactive UI elements.</p>
-        <p>• Optimized app performance by leveraging asynchronous programming (Coroutines) and efficient state handling techniques.</p>
+        <p>• Developed an Android application using Jetpack Compose, implementing Material Design.</p>
+        <p>• Optimized app performance using Coroutines and efficient state handling.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,
@@ -34,21 +33,30 @@ const experiences = [
     duration: "July 2024 - August 2024",
     description: (
       <>
-        <p>• Built a cardiovascular risk assessment tool using IBM Watson and foundational machine learning models.</p>
-        <p>• Processed health metrics data and developed an intuitive interface for real-time risk prediction.</p>
-        <p>• Gained hands-on experience with IBM Watson, AutoML provided by IBM Cloud for building predictive models.</p>
+        <p>• Built a cardiovascular risk assessment tool using IBM Watson.</p>
+        <p>• Processed health metrics data and developed an intuitive interface.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,
   },
 ];
 
-const education = {
-  degree: "B.Tech in Computer Science and Engineering",
-  institution: "Velagapudi Ramakrishna Siddhartha Engineering College",
-  duration: "2022 - Present",
-  cgpa: "9.49/10.0",
-};
+const education = [
+  {
+    degree: "B.Tech in Computer Science and Engineering",
+    institution: "Velagapudi Ramakrishna Siddhartha Engineering College",
+    duration: "2022 - Present",
+    details: "CGPA: 9.49/10.0",
+    icon: <GraduationCap className="w-6 h-6" />,
+  },
+  {
+    degree: "Intermediate (MPC)",
+    institution: "Sri Chaitanya Junior College",
+    duration: "2020 - 2022",
+    details: "Percentage: 97.1%",
+    icon: <GraduationCap className="w-6 h-6" />,
+  }
+];
 
 export const Experience = () => {
   const containerVariants = {
@@ -73,6 +81,47 @@ export const Experience = () => {
     },
   };
 
+  const TimelineSection = ({ title, items, type }: { title: string; items: any[]; type: 'education' | 'experience' }) => (
+    <div className="mb-16">
+      <motion.h3
+        variants={itemVariants}
+        className="text-2xl font-semibold mb-8 text-primary text-center"
+      >
+        {title}
+      </motion.h3>
+      <div className="relative">
+        <div className="absolute left-8 top-0 h-full w-0.5 bg-border"></div>
+        <div className="space-y-8">
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="flex items-start gap-4 relative"
+            >
+              <div className="p-2 bg-sage/10 rounded-lg z-10">
+                {item.icon}
+              </div>
+              <div className="bg-background/10 backdrop-blur-sm p-6 rounded-lg border border-border flex-1">
+                <h4 className="text-xl font-semibold text-primary">
+                  {type === 'education' ? item.degree : item.title}
+                </h4>
+                <p className="text-terra">
+                  {type === 'education' ? item.institution : item.company}
+                </p>
+                <p className="text-sm text-muted-foreground mb-2">{item.duration}</p>
+                {type === 'education' ? (
+                  <p className="text-muted-foreground">{item.details}</p>
+                ) : (
+                  <div className="text-muted-foreground">{item.description}</div>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
       <div className="absolute inset-0 opacity-10">
@@ -80,7 +129,7 @@ export const Experience = () => {
         <div className="stars-2"></div>
         <div className="stars-3"></div>
       </div>
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -92,54 +141,25 @@ export const Experience = () => {
             variants={itemVariants}
             className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
           >
-            Experience
+            Journey
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
+            className="text-3xl md:text-4xl font-bold text-primary"
           >
-            Professional Journey
+            Education & Experience
           </motion.h2>
         </motion.div>
 
-        <div className="flex justify-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="space-y-8 max-w-4xl w-full"
-          >
-            <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
-              <GraduationCap className="w-8 h-8 text-sage" />
-              <div>
-                <h3 className="text-xl font-semibold text-primary">{education.degree}</h3>
-                <p className="text-muted-foreground">{education.institution}</p>
-                <p className="text-sm text-muted-foreground">
-                  {education.duration} | CGPA: {education.cgpa}
-                </p>
-              </div>
-            </motion.div>
-
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="flex items-start gap-4 p-6 rounded-lg border border-border hover:shadow-md transition-shadow bg-background/10 backdrop-blur-sm"
-              >
-                <div className="mt-1 p-2 bg-sage/10 rounded-lg">
-                  {exp.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
-                  <p className="text-terra">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mb-2">{exp.duration}</p>
-                  <div className="text-muted-foreground">{exp.description}</div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <TimelineSection title="Education" items={education} type="education" />
+          <TimelineSection title="Experience" items={experiences} type="experience" />
+        </motion.div>
       </div>
     </section>
   );
