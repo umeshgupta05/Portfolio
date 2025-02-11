@@ -1,42 +1,13 @@
+
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 
 export const Certifications = () => {
   const certifications = [
     {
-      title: "Introduction to Data Science with Python",
-      issuer: "edX",
-      description: "Comprehensive course covering Python fundamentals for data science",
-    },
-    {
-      title: "Complete Responsive Web Development",
-      issuer: "Udemy",
-      description: "Mastered modern web development techniques and responsive design",
-    },
-    {
-      title: "Android Basics with Compose",
-      issuer: "Google Developers",
-      description: "Learned modern Android development using Jetpack Compose",
-    },
-    {
       title: "AWS Cloud Foundations",
       issuer: "AWS Academy",
       description: "Fundamental understanding of AWS cloud services and architecture",
-    },
-    {
-      title: "Java Basic Certification",
-      issuer: "Hackerrank",
-      description: "Solid foundation in Java programming with essential skills and knowledge",
-    },
-    {
-      title: "Programming in Modern C++",
-      issuer: "NPTEL",
-      description: "Advanced concepts and practices in modern C++ programming",
-    },
-    {
-      title: "Python Essentials",
-      issuer: "Cisco Networking Academy",
-      description: "Fundamentals of Python programming for real-world applications",
     },
     {
       title: "Salesforce Certified AI Associate",
@@ -44,14 +15,14 @@ export const Certifications = () => {
       description: "Acquired skills in AI and machine learning with Salesforce tools",
     },
     {
-      title: "Introduction to Networks",
-      issuer: "Cisco Networking Academy",
-      description: "In-depth understanding of networking principles and protocols",
+      title: "Android Basics with Compose",
+      issuer: "Google Developers",
+      description: "Learned modern Android development using Jetpack Compose",
     },
     {
-      title: "Foundation of R Software",
-      issuer: "NPTEL",
-      description: "Introduction to R programming for data analysis and statistical modeling",
+      title: "Complete Responsive Web Development",
+      issuer: "Udemy",
+      description: "Mastered modern web development techniques and responsive design",
     },
     {
       title: "SQL Intermediate Certification",
@@ -84,7 +55,7 @@ export const Certifications = () => {
 
   return (
     <section className="py-20 px-4 bg-transparent" id="certifications">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -111,13 +82,13 @@ export const Certifications = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="space-y-6"
+          className="space-y-6 flex flex-col items-center"
         >
           {certifications.map((cert, index) => (
             <motion.li
               key={index}
               variants={itemVariants}
-              className="flex items-start gap-4"
+              className="flex items-start gap-4 max-w-xl w-full bg-white/[0.02] backdrop-blur-[2px] p-4 rounded-lg border border-border"
             >
               <div className="mt-1">
                 <Award className="w-6 h-6 text-sage" />
