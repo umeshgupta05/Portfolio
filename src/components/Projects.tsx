@@ -7,20 +7,20 @@ const projects = [
     title: "Medi Collab",
     description: "A medical knowledge-sharing platform enabling healthcare professionals to collaborate, share research, and engage in clinical discussions.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
-    tech: ["React.js", "Node.js", "MongoDB", "WebSocket"],
+    tech: ["React", "Tailwind CSS"],
     links: {
-      github: "#",
-      live: "#",
+      github: "https://github.com/umeshgupta05/MediCollab",
+      live: "https://medi-collab.vercel.app/",
     },
   },
   {
     title: "Hackathon Management Dashboard (HackHub)",
     description: "A responsive platform for managing and exploring hackathons, featuring event tracking, real-time notifications, and submission management.",
     image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0",
-    tech: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    tech: ["React", "Tailwind CSS"],
     links: {
-      github: "#",
-      live: "#",
+      github: "https://github.com/umeshgupta05/Hack-Hub",
+      live: "https://hack-hub-taupe.vercel.app/",
     },
   },
   {
