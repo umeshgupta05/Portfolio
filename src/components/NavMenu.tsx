@@ -20,7 +20,7 @@ interface NavItem {
   sectionId: string;
 }
 
-export const NavMenu = () => {
+export const NavMenu = ({ onSectionChange }: { onSectionChange: (sectionId: string) => void }) => {
   const [activeSection, setActiveSection] = useState<string>("hero");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,35 +35,15 @@ export const NavMenu = () => {
   ];
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
-      setIsMenuOpen(false);
-    }
+    setActiveSection(sectionId);
+    onSectionChange(sectionId);
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => item.sectionId);
-      
-      // Find the current section in view
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // If the section is in view (with some buffer)
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [navItems]);
+    // Set hero as default active section
+    onSectionChange("hero");
+  }, [onSectionChange]);
 
   return (
     <>
