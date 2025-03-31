@@ -1,3 +1,4 @@
+
 import { Hero } from "@/components/Hero";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
@@ -6,6 +7,7 @@ import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Achievements } from "@/components/Achievements";
+import { NavMenu } from "@/components/NavMenu";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -26,6 +28,7 @@ const Index = () => {
           opacity: 0.15
         }}
       />
+      <NavMenu />
       <div className="relative z-10 bg-white/10 backdrop-blur-[2px]">
         <Hero />
         <Experience />
