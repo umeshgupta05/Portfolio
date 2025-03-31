@@ -1,10 +1,6 @@
 
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
-import { NeonCard } from "./ui/magic/neon-card";
-import { TextGlow } from "./ui/magic/text-glow";
-import { Spotlight } from "./ui/magic/spotlight";
-import { Meteors } from "./ui/magic/meteors";
 
 export const Certifications = () => {
   const certifications = [
@@ -58,9 +54,8 @@ export const Certifications = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-black/90 relative" id="certifications">
-      <Meteors number={10} />
-      <Spotlight className="max-w-3xl mx-auto">
+    <section className="py-20 px-4 bg-transparent" id="certifications">
+      <div className="max-w-3xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -76,9 +71,9 @@ export const Certifications = () => {
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold"
+            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
           >
-            <TextGlow>Professional Development</TextGlow>
+            Professional Development
           </motion.h2>
         </motion.div>
 
@@ -93,25 +88,20 @@ export const Certifications = () => {
             <motion.li
               key={index}
               variants={itemVariants}
-              className="w-full"
+              className="flex items-start gap-4 max-w-xl w-full bg-white/[0.02] backdrop-blur-[2px] p-4 rounded-lg border border-border"
             >
-              <NeonCard 
-                gradient={index % 3 === 0 ? "purple" : index % 3 === 1 ? "cyan" : "pink"}
-                className="flex items-start gap-4 max-w-xl w-full"
-              >
-                <div className="mt-1">
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-primary">{cert.title}</h3>
-                  <p className="text-sm text-secondary">{cert.issuer}</p>
-                  <p className="text-sm text-muted-foreground">{cert.description}</p>
-                </div>
-              </NeonCard>
+              <div className="mt-1">
+                <Award className="w-6 h-6 text-sage" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-primary">{cert.title}</h3>
+                <p className="text-sm text-terra">{cert.issuer}</p>
+                <p className="text-sm text-muted-foreground">{cert.description}</p>
+              </div>
             </motion.li>
           ))}
         </motion.ul>
-      </Spotlight>
+      </div>
     </section>
   );
 };

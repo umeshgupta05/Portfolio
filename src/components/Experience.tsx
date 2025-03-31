@@ -1,10 +1,5 @@
-
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
-import { Spotlight } from "./ui/magic/spotlight";
-import { NeonCard } from "./ui/magic/neon-card";
-import { Meteors } from "./ui/magic/meteors";
-import { TextGlow } from "./ui/magic/text-glow";
 
 const experiences = [
   {
@@ -62,80 +57,78 @@ const education = [
   }
 ];
 
-// Define animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-const TimelineSection = ({ title, items, type }: { title: string; items: any[]; type: 'education' | 'experience' }) => {
-  return (
-    <div className="mb-16">
-      <motion.h3
-        variants={itemVariants}
-        className="text-2xl font-semibold mb-8 text-center"
-      >
-        <TextGlow>{title}</TextGlow>
-      </motion.h3>
-      <div className="relative">
-        <div className="absolute left-8 top-0 h-full w-0.5 bg-primary/30"></div>
-        <div className="space-y-8">
-          {items.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="flex items-start gap-4 relative"
-            >
-              <div className="p-2 bg-primary/10 rounded-lg z-10">
-                {item.icon}
-              </div>
-              <NeonCard 
-                gradient={index % 2 === 0 ? "purple" : "blue"} 
-                className="flex-1"
-              >
-                <h4 className="text-xl font-semibold text-primary">
-                  {type === 'education' ? item.degree : item.title}
-                </h4>
-                <p className="text-secondary">
-                  {type === 'education' ? item.institution : item.company}
-                </p>
-                <p className="text-sm text-muted-foreground mb-2">{item.duration}</p>
-                {type === 'education' ? (
-                  <p className="text-muted-foreground">{item.details}</p>
-                ) : (
-                  <div className="text-muted-foreground">{item.description}</div>
-                )}
-              </NeonCard>
-            </motion.div>
-          ))}
-        </div>
+const TimelineSection = ({ title, items, type }: { title: string; items: any[]; type: 'education' | 'experience' }) => (
+  <div className="mb-16">
+    <motion.h3
+      variants={itemVariants}
+      className="text-2xl font-semibold mb-8 text-primary text-center"
+    >
+      {title}
+    </motion.h3>
+    <div className="relative">
+      <div className="absolute left-8 top-0 h-full w-0.5 bg-border"></div>
+      <div className="space-y-8">
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            variants={itemVariants}
+            className="flex items-start gap-4 relative"
+          >
+            <div className="p-2 bg-sage/10 rounded-lg z-10">
+              {item.icon}
+            </div>
+            <div className="bg-background/10 backdrop-blur-sm p-6 rounded-lg border border-border flex-1">
+              <h4 className="text-xl font-semibold text-primary">
+                {type === 'education' ? item.degree : item.title}
+              </h4>
+              <p className="text-terra">
+                {type === 'education' ? item.institution : item.company}
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">{item.duration}</p>
+              {type === 'education' ? (
+                <p className="text-muted-foreground">{item.details}</p>
+              ) : (
+                <div className="text-muted-foreground">{item.description}</div>
+              )}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export const Experience = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-black/90" id="experience">
-      <Meteors number={15} />
-      <Spotlight className="max-w-4xl mx-auto relative z-10">
+    <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
+      <div className="absolute inset-0 opacity-10">
+        <div className="stars-1"></div>
+        <div className="stars-2"></div>
+        <div className="stars-3"></div>
+      </div>
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -151,9 +144,9 @@ export const Experience = () => {
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold"
+            className="text-3xl md:text-4xl font-bold text-primary"
           >
-            <TextGlow>Education & Experience</TextGlow>
+            Education & Experience
           </motion.h2>
         </motion.div>
 
@@ -166,7 +159,7 @@ export const Experience = () => {
           <TimelineSection title="Education" items={education} type="education" />
           <TimelineSection title="Experience" items={experiences} type="experience" />
         </motion.div>
-      </Spotlight>
+      </div>
     </section>
   );
 };
