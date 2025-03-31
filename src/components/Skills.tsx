@@ -1,6 +1,9 @@
 
 import { motion } from "framer-motion";
 import { Code2, Braces, Database, Cloud, Terminal, Wrench } from "lucide-react";
+import { Spotlight } from "./ui/magic/spotlight";
+import { MagicCard } from "./ui/magic/magic-card";
+import { TextGlow } from "./ui/magic/text-glow";
 
 const skills = [
   // Programming Languages
@@ -82,8 +85,8 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-transparent" id="skills">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-4 bg-black/90" id="skills">
+      <Spotlight className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -99,9 +102,9 @@ export const Skills = () => {
           </motion.span>
           <motion.h2
             variants={skillVariants}
-            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
+            className="text-3xl md:text-4xl font-bold"
           >
-            Technical Expertise
+            <TextGlow>Technical Expertise</TextGlow>
           </motion.h2>
         </motion.div>
 
@@ -113,42 +116,44 @@ export const Skills = () => {
           className="space-y-12"
         >
           {categories.map((category) => (
-            <div key={category} className="bg-white/[0.02] backdrop-blur-md rounded-2xl p-6 border border-sage/10">
-              <div className="flex items-center gap-3 mb-6">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-                  className="p-2 rounded-lg bg-primary/10 text-primary"
-                >
-                  {getCategoryIcon(category)}
-                </motion.div>
-                <h3 className="text-2xl font-semibold text-primary">{category}</h3>
+            <MagicCard key={category} className="w-full">
+              <div className="bg-black/70 backdrop-blur-md rounded-xl p-6 border border-primary/20">
+                <div className="flex items-center gap-3 mb-6">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                    className="p-2 rounded-lg bg-primary/10 text-primary"
+                  >
+                    {getCategoryIcon(category)}
+                  </motion.div>
+                  <h3 className="text-2xl font-semibold text-primary">{category}</h3>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {skills
+                    .filter(skill => skill.category === category)
+                    .map((skill) => (
+                      <motion.div
+                        key={skill.name}
+                        variants={skillVariants}
+                        whileHover={{ scale: 1.05 }}
+                        className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-primary/10 backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-300"
+                      >
+                        <div className="flex-shrink-0">
+                          <img 
+                            src={skill.icon} 
+                            alt={skill.name} 
+                            className="w-8 h-8 object-contain"
+                          />
+                        </div>
+                        <span className="font-medium text-foreground text-sm">{skill.name}</span>
+                      </motion.div>
+                    ))}
+                </div>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {skills
-                  .filter(skill => skill.category === category)
-                  .map((skill) => (
-                    <motion.div
-                      key={skill.name}
-                      variants={skillVariants}
-                      whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-sage/10 backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-300"
-                    >
-                      <div className="flex-shrink-0">
-                        <img 
-                          src={skill.icon} 
-                          alt={skill.name} 
-                          className="w-8 h-8 object-contain"
-                        />
-                      </div>
-                      <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    </motion.div>
-                  ))}
-              </div>
-            </div>
+            </MagicCard>
           ))}
         </motion.div>
-      </div>
+      </Spotlight>
     </section>
   );
 };

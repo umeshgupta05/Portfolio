@@ -1,6 +1,10 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { Spotlight } from "./ui/magic/spotlight";
+import { NeonCard } from "./ui/magic/neon-card";
+import { Meteors } from "./ui/magic/meteors";
+import { TextGlow } from "./ui/magic/text-glow";
 
 const experiences = [
   {
@@ -82,17 +86,16 @@ const itemVariants = {
 };
 
 const TimelineSection = ({ title, items, type }: { title: string; items: any[]; type: 'education' | 'experience' }) => {
-  // Here we need to pass the itemVariants down
   return (
     <div className="mb-16">
       <motion.h3
         variants={itemVariants}
-        className="text-2xl font-semibold mb-8 text-primary text-center"
+        className="text-2xl font-semibold mb-8 text-center"
       >
-        {title}
+        <TextGlow>{title}</TextGlow>
       </motion.h3>
       <div className="relative">
-        <div className="absolute left-8 top-0 h-full w-0.5 bg-border"></div>
+        <div className="absolute left-8 top-0 h-full w-0.5 bg-primary/30"></div>
         <div className="space-y-8">
           {items.map((item, index) => (
             <motion.div
@@ -100,14 +103,17 @@ const TimelineSection = ({ title, items, type }: { title: string; items: any[]; 
               variants={itemVariants}
               className="flex items-start gap-4 relative"
             >
-              <div className="p-2 bg-sage/10 rounded-lg z-10">
+              <div className="p-2 bg-primary/10 rounded-lg z-10">
                 {item.icon}
               </div>
-              <div className="bg-background/10 backdrop-blur-sm p-6 rounded-lg border border-border flex-1">
+              <NeonCard 
+                gradient={index % 2 === 0 ? "purple" : "blue"} 
+                className="flex-1"
+              >
                 <h4 className="text-xl font-semibold text-primary">
                   {type === 'education' ? item.degree : item.title}
                 </h4>
-                <p className="text-terra">
+                <p className="text-secondary">
                   {type === 'education' ? item.institution : item.company}
                 </p>
                 <p className="text-sm text-muted-foreground mb-2">{item.duration}</p>
@@ -116,7 +122,7 @@ const TimelineSection = ({ title, items, type }: { title: string; items: any[]; 
                 ) : (
                   <div className="text-muted-foreground">{item.description}</div>
                 )}
-              </div>
+              </NeonCard>
             </motion.div>
           ))}
         </div>
@@ -127,13 +133,9 @@ const TimelineSection = ({ title, items, type }: { title: string; items: any[]; 
 
 export const Experience = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
-      <div className="absolute inset-0 opacity-10">
-        <div className="stars-1"></div>
-        <div className="stars-2"></div>
-        <div className="stars-3"></div>
-      </div>
-      <div className="max-w-4xl mx-auto relative z-10">
+    <section className="py-20 px-4 relative overflow-hidden bg-black/90" id="experience">
+      <Meteors number={15} />
+      <Spotlight className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -149,9 +151,9 @@ export const Experience = () => {
           </motion.span>
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold text-primary"
+            className="text-3xl md:text-4xl font-bold"
           >
-            Education & Experience
+            <TextGlow>Education & Experience</TextGlow>
           </motion.h2>
         </motion.div>
 
@@ -164,7 +166,7 @@ export const Experience = () => {
           <TimelineSection title="Education" items={education} type="education" />
           <TimelineSection title="Experience" items={experiences} type="experience" />
         </motion.div>
-      </div>
+      </Spotlight>
     </section>
   );
 };
