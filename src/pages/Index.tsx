@@ -1,5 +1,3 @@
-
-import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
@@ -8,37 +6,9 @@ import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Achievements } from "@/components/Achievements";
-import { NavMenu } from "@/components/NavMenu";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState<string>("hero");
-
-  const handleSectionChange = (sectionId: string) => {
-    setActiveSection(sectionId);
-  };
-
-  const renderSection = () => {
-    switch (activeSection) {
-      case "hero":
-        return <Hero />;
-      case "experience":
-        return <Experience />;
-      case "certifications":
-        return <Certifications />;
-      case "skills":
-        return <Skills />;
-      case "projects":
-        return <Projects />;
-      case "achievements":
-        return <Achievements />;
-      case "contact":
-        return <Contact />;
-      default:
-        return <Hero />;
-    }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -56,19 +26,14 @@ const Index = () => {
           opacity: 0.15
         }}
       />
-      <NavMenu onSectionChange={handleSectionChange} />
       <div className="relative z-10 bg-white/10 backdrop-blur-[2px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeSection}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            {renderSection()}
-          </motion.div>
-        </AnimatePresence>
+        <Hero />
+        <Experience />
+        <Certifications />
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Contact />
         <Footer />
       </div>
     </motion.div>

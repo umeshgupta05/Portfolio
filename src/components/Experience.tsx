@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
 
@@ -58,28 +57,6 @@ const education = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
 const TimelineSection = ({ title, items, type }: { title: string; items: any[]; type: 'education' | 'experience' }) => (
   <div className="mb-16">
     <motion.h3
@@ -122,6 +99,28 @@ const TimelineSection = ({ title, items, type }: { title: string; items: any[]; 
 );
 
 export const Experience = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
       <div className="absolute inset-0 opacity-10">
