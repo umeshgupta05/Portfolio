@@ -14,13 +14,23 @@ const projects = [
     },
   },
   {
-    title: "Hackathon Management Dashboard (HackHub)",
-    description: "A responsive platform for managing and exploring hackathons, featuring event tracking, real-time notifications, and submission management.",
-    image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0",
-    tech: ["React", "Tailwind CSS"],
+    title: "Lumbar Spine Degenerative Classification",
+    description: "An AI-powered tool for classifying degenerative changes in lumbar spine MRI scans, enhancing diagnostic accuracy and efficiency for radiologists.",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    tech: ["Python", "TensorFlow", "Deep Learning", "Medical Imaging"],
     links: {
-      github: "https://github.com/umeshgupta05/Hack-Hub",
-      live: "https://hack-hub-taupe.vercel.app/",
+      github: "https://github.com/umeshgupta05/lumbar-classification",
+      live: "#",
+    },
+  },
+  {
+    title: "ShopSphere",
+    description: "An e-commerce application developed as a prototype for the Walmart Sparkathon, featuring seamless shopping experience with modern UI/UX design.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    tech: ["React", "Redux", "Node.js", "MongoDB"],
+    links: {
+      github: "https://github.com/umeshgupta05/shopsphere",
+      live: "#",
     },
   },
   {
