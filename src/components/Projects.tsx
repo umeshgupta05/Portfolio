@@ -35,7 +35,7 @@ const projects = [
     title: "ShopSphere",
     description: "An e-commerce application developed as a prototype for the Walmart Sparkathon, featuring seamless shopping experience with modern UI/UX design.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tech: ["React", "Redux", "Node.js", "MongoDB"],
+    tech: ["React", "Express.js", "Node.js", "MongoDB"],
     links: {
       github: "https://github.com/umeshgupta05/shopsphere",
       live: "#",
