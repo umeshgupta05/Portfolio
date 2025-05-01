@@ -236,7 +236,7 @@ export const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.slice(3).map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.title}
               variants={itemVariants}
