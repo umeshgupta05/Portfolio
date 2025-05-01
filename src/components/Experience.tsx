@@ -46,7 +46,7 @@ const education = [
     degree: "B.Tech in Computer Science and Engineering",
     institution: "Velagapudi Ramakrishna Siddhartha Engineering College",
     duration: "2022 - Present",
-    details: "CGPA: 9.49/10.0",
+    details: "CGPA: 9.38/10.0",
     icon: <GraduationCap className="w-6 h-6" />,
   },
   {
