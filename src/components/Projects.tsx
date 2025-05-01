@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Code, Rocket, Cpu, ShoppingCart } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { 
   Carousel,
   CarouselContent,
@@ -9,7 +9,6 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { SolarSystem } from "@/components/SolarSystem";
 
 const projects = [
   {
@@ -128,17 +127,27 @@ const imageVariants = {
 export const Projects = () => {
   return (
     <section className="py-16 px-4 bg-transparent relative overflow-hidden" id="projects">
-      <SolarSystem />
-      
       <div className="max-w-7xl mx-auto">
-        <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-10 text-gradient"
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="text-center mb-16"
         >
-          Projects
-        </motion.h2>
+          <motion.span
+            variants={itemVariants}
+            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
+          >
+            Journey
+          </motion.span>
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl md:text-4xl font-bold text-primary"
+          >
+            Projects
+          </motion.h2>
+        </motion.div>
         
         <motion.div
           variants={containerVariants}
