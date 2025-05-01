@@ -52,7 +52,7 @@ const projects = [
     },
   },
   {
-    title: "Attendance Management System",
+    title: "Attendance Management System using Face Recognition",
     description: "A face recognition-based system to automate attendance tracking with real-time detection.",
     image: "/lovable-uploads/7900aada-266f-4c47-9bfc-cc9b56387ae4.png",
     tech: ["Python", "OpenCV", "PyMySQL"],
@@ -72,7 +72,7 @@ const projects = [
     },
   },
   {
-    title: "Smart Stick for Visually Impaired Persons",
+    title: "Intelligent Assistive Stick for Visually impaired and Elderly",
     description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors and variable vibration intensity based on obstacle distance.",
     image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
     tech: ["IoT", "Arduino", "Ultrasonic Sensors"],
