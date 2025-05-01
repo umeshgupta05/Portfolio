@@ -1,104 +1,164 @@
 
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Briefcase, GraduationCap } from "lucide-react";
 
-// Define the animation variants
+const experiences = [
+  {
+    title: "Math Tutor",
+    company: "Outlier.ai",
+    duration: "November 2024 - Present",
+    description: (
+      <>
+        <p>• Gained exposure to creating test cases for validating AI model outputs.</p>
+        <p>• Learned the basics of evaluating AI models' performance for mathematical problem-solving.</p>
+      </>
+    ),
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    title: "Android Developer Intern",
+    company: "Eduskills Foundation - AICTE Virtual Internship",
+    duration: "July 2024 - August 2024",
+    description: (
+      <>
+        <p>• Developed an Android application using Jetpack Compose, implementing Material Design.</p>
+        <p>• Optimized app performance using Coroutines and efficient state handling.</p>
+      </>
+    ),
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    title: "AI & Cloud Intern",
+    company: "Edunet Foundation - AICTE Virtual Internship",
+    duration: "July 2024 - August 2024",
+    description: (
+      <>
+        <p>• Built a cardiovascular risk assessment tool using IBM Watson.</p>
+        <p>• Processed health metrics data and developed an intuitive interface.</p>
+      </>
+    ),
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+];
+
+const education = [
+  {
+    degree: "B.Tech in Computer Science and Engineering",
+    institution: "Velagapudi Ramakrishna Siddhartha Engineering College",
+    duration: "2022 - Present",
+    details: "CGPA: 9.49/10.0",
+    icon: <GraduationCap className="w-6 h-6" />,
+  },
+  {
+    degree: "Intermediate (MPC)",
+    institution: "K.B.N Junior College",
+    duration: "2020 - 2022",
+    details: "Percentage: 98.4%",
+    icon: <GraduationCap className="w-6 h-6" />,
+  }
+];
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
 };
 
-export const Experience = () => {
-  const experiences = [
-    {
-      title: "Software Engineer",
-      company: "Google",
-      duration: "2020 - Present",
-      description: "Developing and maintaining front-end applications using React, TypeScript, and Next.js. Collaborating with cross-functional teams to deliver high-quality software solutions.",
-      skills: ["React", "TypeScript", "Next.js", "Redux", "GraphQL"]
-    },
-    {
-      title: "Front-end Developer",
-      company: "Microsoft",
-      duration: "2018 - 2020",
-      description: "Implemented responsive web designs and optimized application performance. Worked closely with designers to ensure pixel-perfect implementation of UI components.",
-      skills: ["JavaScript", "Vue.js", "CSS", "SASS", "Webpack"]
-    },
-    {
-      title: "Web Developer Intern",
-      company: "Amazon",
-      duration: "2017 - 2018",
-      description: "Assisted in developing and debugging web applications. Gained hands-on experience with front-end technologies and agile development methodologies.",
-      skills: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"]
-    }
-  ];
+const TimelineSection = ({ title, items, type }: { title: string; items: any[]; type: 'education' | 'experience' }) => (
+  <div className="mb-16">
+    <motion.h3
+      variants={itemVariants}
+      className="text-2xl font-semibold mb-8 text-primary text-center"
+    >
+      {title}
+    </motion.h3>
+    <div className="relative">
+      <div className="absolute left-8 top-0 h-full w-0.5 bg-border"></div>
+      <div className="space-y-8">
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            variants={itemVariants}
+            className="flex items-start gap-4 relative"
+          >
+            <div className="p-2 bg-sage/10 rounded-lg z-10">
+              {item.icon}
+            </div>
+            <div className="bg-background/10 backdrop-blur-sm p-6 rounded-lg border border-border flex-1">
+              <h4 className="text-xl font-semibold text-primary">
+                {type === 'education' ? item.degree : item.title}
+              </h4>
+              <p className="text-terra">
+                {type === 'education' ? item.institution : item.company}
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">{item.duration}</p>
+              {type === 'education' ? (
+                <p className="text-muted-foreground">{item.details}</p>
+              ) : (
+                <div className="text-muted-foreground">{item.description}</div>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
+export const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 md:px-8 bg-white/5 backdrop-blur-sm">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center text-gradient">
-          Professional Experience
-        </h2>
-        
+    <section className="py-20 px-4 relative overflow-hidden bg-background/5 backdrop-blur-sm" id="experience">
+      <div className="absolute inset-0 opacity-10">
+        <div className="stars-1"></div>
+        <div className="stars-2"></div>
+        <div className="stars-3"></div>
+      </div>
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
-          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="space-y-6"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="text-center mb-16"
         >
-          {experiences.map((exp, index) => (
-            <motion.div 
-              key={index}
-              variants={itemVariants}
-              className="relative"
-            >
-              <Card className="glass card-hover border border-primary/20">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl md:text-2xl font-bold">
-                        {exp.title}
-                      </CardTitle>
-                      <p className="text-lg text-primary">{exp.company}</p>
-                    </div>
-                    <div>
-                      <Badge variant="outline" className="bg-white/10 backdrop-blur-sm">
-                        {exp.duration}
-                      </Badge>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-neutral-100">{exp.description}</p>
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {exp.skills.map((skill, idx) => (
-                      <Badge key={idx} className="bg-secondary/10 text-secondary border-secondary/30">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+          <motion.span
+            variants={itemVariants}
+            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
+          >
+            Journey
+          </motion.span>
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl md:text-4xl font-bold text-primary"
+          >
+            Education & Experience
+          </motion.h2>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <TimelineSection title="Education" items={education} type="education" />
+          <TimelineSection title="Experience" items={experiences} type="experience" />
         </motion.div>
       </div>
     </section>

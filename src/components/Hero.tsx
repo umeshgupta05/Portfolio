@@ -1,13 +1,10 @@
-
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { HeroContent } from "./hero/HeroContent";
-import { SolarSystem } from "./SolarSystem";
 
 export const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden bg-gradient-to-b from-white to-primary-light/20">
-      <SolarSystem />
       <HeroContent />
       <motion.div
         initial={{ opacity: 0 }}
