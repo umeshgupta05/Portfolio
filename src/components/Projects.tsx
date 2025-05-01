@@ -164,7 +164,7 @@ export const Projects = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {projects.slice(0, 3).map((project) => (
+              {projects.map((project) => (
                 <CarouselItem key={project.title} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <motion.div variants={itemVariants}>
                     <Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
