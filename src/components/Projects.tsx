@@ -1,6 +1,15 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Code, Rocket, Cpu, ShoppingCart } from "lucide-react";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+import { SolarSystem } from "@/components/SolarSystem";
 
 const projects = [
   {
@@ -80,7 +89,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.1
     }
   }
 };
@@ -91,7 +100,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: [0.43, 0.13, 0.23, 0.96]
     }
   }
@@ -118,23 +127,107 @@ const imageVariants = {
 
 export const Projects = () => {
   return (
-    <section className="py-12 px-4 bg-transparent" id="projects">
-      <div className="max-w-6xl mx-auto">
-        <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-5">
-          <Code className="absolute top-1/4 left-1/4 w-12 h-12 text-primary/10 transform -rotate-12" />
-          <Rocket className="absolute top-1/3 right-1/4 w-16 h-16 text-secondary/10 transform rotate-12" />
-          <Cpu className="absolute bottom-1/4 left-1/3 w-20 h-20 text-accent/10 transform -rotate-6" />
-          <ShoppingCart className="absolute bottom-1/3 right-1/3 w-12 h-12 text-primary/10 transform rotate-12" />
-        </div>
+    <section className="py-16 px-4 bg-transparent relative overflow-hidden" id="projects">
+      <SolarSystem />
+      
+      <div className="max-w-7xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-10 text-gradient"
+        >
+          Projects
+        </motion.h2>
         
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-8"
         >
-          {projects.map((project, index) => (
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {projects.slice(0, 3).map((project) => (
+                <CarouselItem key={project.title} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <motion.div variants={itemVariants}>
+                    <Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                      <motion.div
+                        initial="rest"
+                        whileHover="hover"
+                        animate="rest"
+                        className="aspect-video overflow-hidden"
+                      >
+                        <motion.img
+                          variants={imageVariants}
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.div>
+                      <CardContent className="p-4">
+                        <h3 className="text-lg font-semibold mb-2 text-primary line-clamp-1">{project.title}</h3>
+                        <p className="text-sm text-neutral mb-3 line-clamp-2">{project.description}</p>
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          {project.tech.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-0.5 text-xs bg-secondary/10 text-secondary rounded-full"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex gap-3">
+                          <motion.a
+                            whileHover={{ scale: 1.05 }}
+                            href={project.links.github}
+                            className="flex items-center gap-1.5 text-sm text-neutral hover:text-primary transition-colors"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4" />
+                            <span>Code</span>
+                          </motion.a>
+                          <motion.a
+                            whileHover={{ scale: 1.05 }}
+                            href={project.links.live}
+                            className="flex items-center gap-1.5 text-sm text-neutral hover:text-secondary transition-colors"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            <span>Live Demo</span>
+                          </motion.a>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden md:flex">
+              <CarouselPrevious className="left-1" />
+              <CarouselNext className="right-1" />
+            </div>
+          </Carousel>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {projects.slice(3).map((project, index) => (
             <motion.div
               key={project.title}
               variants={itemVariants}
@@ -153,7 +246,7 @@ export const Projects = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <div className="p-3">
+              <div className="p-4">
                 <h3 className="text-base font-semibold mb-1 text-primary line-clamp-1">{project.title}</h3>
                 <p className="text-xs text-neutral mb-2 line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-1 mb-2">
@@ -180,7 +273,7 @@ export const Projects = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={project.links.live}
-                    className="flex items-center gap-1 text-xs text-neutral hover:text-secondary transition-colors"
+                    className="flex items-center gap-1.5 text-xs text-neutral hover:text-secondary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
