@@ -157,79 +157,79 @@ export const Projects = () => {
           className="mb-8"
         >
           <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {projects.map((project) => (
-                <CarouselItem key={project.title} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <motion.div variants={itemVariants}>
-                    <Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
-                      <motion.div
-                        initial="rest"
-                        whileHover="hover"
-                        animate="rest"
-                        className="aspect-video overflow-hidden"
-                      >
-                        <motion.img
-                          variants={imageVariants}
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </motion.div>
-                      <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold mb-2 text-primary line-clamp-1">{project.title}</h3>
-                        <p className="text-sm text-neutral mb-3 line-clamp-2">{project.description}</p>
-                        <div className="flex flex-wrap gap-1.5 mb-3">
-                          {project.tech.map((tech) => (
-                            <span
-                              key={tech}
-                              className="px-2 py-0.5 text-xs bg-secondary/10 text-secondary rounded-full"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="flex gap-3">
-                          <motion.a
-                            whileHover={{ scale: 1.05 }}
-                            href={project.links.github}
-                            className="flex items-center gap-1.5 text-sm text-neutral hover:text-primary transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Github className="w-4 h-4" />
-                            <span>Code</span>
-                          </motion.a>
-                          <motion.a
-                            whileHover={{ scale: 1.05 }}
-                            href={project.links.live}
-                            className="flex items-center gap-1.5 text-sm text-neutral hover:text-secondary transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="w-4 h-4" />
-                            <span>Live Demo</span>
-                          </motion.a>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="hidden md:flex">
-              <CarouselPrevious className="left-1" />
-              <CarouselNext className="right-1" />
-            </div>
-          </Carousel>
-        </motion.div>
+opts={{
+align: "start",
+loop: true,
+}}
+className="w-full"
+>
+<CarouselContent className="-ml-2 md:-ml-4">
+{projects.map((project) => (
+<CarouselItem key={project.title} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+<motion.div variants={itemVariants}>
+<Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+<motion.div
+initial="rest"
+whileHover="hover"
+animate="rest"
+className="aspect-video overflow-hidden"
+>
+<motion.img
+variants={imageVariants}
+src={project.image}
+alt={project.title}
+className="w-full h-full object-cover"
+/>
+</motion.div>
+<CardContent className="p-4">
+<h3 className="text-lg font-semibold mb-2 text-primary line-clamp-1">{project.title}</h3>
+<p className="text-sm text-neutral mb-3 line-clamp-2">{project.description}</p>
+<div className="flex flex-wrap gap-1.5 mb-3">
+{project.tech.map((tech) => (
+<span  
+key={tech}  
+className="px-2 py-0.5 text-xs bg-secondary/10 text-secondary rounded-full"  
+>
+{tech}
+</span>
+))}
+</div>
+<div className="flex gap-3">
+<motion.a
+whileHover={{ scale: 1.05 }}
+href={project.links.github}
+className="flex items-center gap-1.5 text-sm text-neutral hover:text-primary transition-colors"
+target="_blank"
+rel="noopener noreferrer"
+>
+<Github className="w-4 h-4" />
+<span>Code</span>
+</motion.a>
+<motion.a
+whileHover={{ scale: 1.05 }}
+href={project.links.live}
+className="flex items-center gap-1.5 text-sm text-neutral hover:text-secondary transition-colors"
+target="_blank"
+rel="noopener noreferrer"
+>
+<ExternalLink className="w-4 h-4" />
+<span>Live Demo</span>
+</motion.a>
+</div>
+</CardContent>
+</Card>
+</motion.div>
+</CarouselItem>
+))}
+</CarouselContent>
+<div className="hidden md:flex">
+<CarouselPrevious className="left-1" />
+<CarouselNext className="right-1" />
+</div>
+</Carousel>
+</motion.div>
 
-       <motion.div  
+<motion.div  
       variants={containerVariants}  
       initial="hidden"  
       whileInView="visible"  
@@ -291,8 +291,11 @@ export const Projects = () => {
               </motion.a>  
             </div>  
           </div>  
-        </motion.div> 
-      </div>
-    </section>
+        </motion.div>  
+      ))}  
+    </motion.div>  
+  </div>  
+</section>
+
   );
 };
