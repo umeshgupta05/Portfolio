@@ -4,13 +4,28 @@ import { Briefcase, GraduationCap } from "lucide-react";
 
 const experiences = [
   {
-    title: "Math Tutor",
-    company: "Outlier.ai",
-    duration: "November 2024 - Present",
+    title: "Mobile Application Developer",
+    company: "MedCopilot - Freelance Team Project",
+    duration: "January 2025 - Present",
     description: (
       <>
-        <p>• Gained exposure to creating test cases for validating AI model outputs.</p>
-        <p>• Learned the basics of evaluating AI models' performance for mathematical problem-solving.</p>
+        <p>• Developed the frontend of DeepMediQ, a cross-platform mobile application using React Native to interface with a health-focused AI chatbot.</p>
+        <p>• Designed intuitive UI components for smooth user interaction, enabling users to input medical queries and receive detailed, AI-generated responses.</p>
+        <p>• Worked closely with a 3 member development team to build scalable and maintainable mobile screens aligned with healthcare usability standards.</p>
+        <p>• Integrated the mobile interface with a backend chatbot supporting MedCopilot, an AI-powered health assistant by a US-based startup.</p>
+      </>
+    ),
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    title: "Python Full Stack Development Intern",
+    company: "Eduskills Foundation",
+    duration: "March 2025 - May 2025",
+    description: (
+      <>
+        <p>• Undergoing structured training in full stack development with a focus on Python, Django, and RESTful backend concepts.</p>
+        <p>• Learning core frontend technologies including HTML, CSS, JavaScript, and jQuery for responsive web design.</p>
+        <p>• Gaining foundational knowledge of integrating frontend interfaces with backend logic using Django framework.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,
@@ -28,13 +43,15 @@ const experiences = [
     icon: <Briefcase className="w-6 h-6" />,
   },
   {
-    title: "AI & Cloud Intern",
-    company: "Edunet Foundation - AICTE Virtual Internship",
-    duration: "July 2024 - August 2024",
+    title: "Amazon AWS Virtual Intern",
+    company: "Eduskills Foundation",
+    duration: "April 2024 - June 2024",
     description: (
       <>
-        <p>• Built a cardiovascular risk assessment tool using IBM Watson.</p>
-        <p>• Processed health metrics data and developed an intuitive interface.</p>
+        <p>• Successfully completed the Amazon AWS Cloud Virtual Internship, gaining hands-on experience with core AWS services.</p>
+        <p>• Deployed a static website using Amazon EC2, configuring security groups and load balancing for availability.</p>
+        <p>• Utilized Amazon S3 for scalable object storage and hosted static content with public access configuration.</p>
+        <p>• Understood practical implementation of cloud architecture, monitoring (CloudWatch), and cost management tools.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,

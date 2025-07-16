@@ -5,29 +5,44 @@ import { Award } from "lucide-react";
 export const Certifications = () => {
   const certifications = [
     {
+      title: "Programming in Modern C++",
+      issuer: "NPTEL",
+      description: "Score: 77/100 Top 2%",
+    },
+    {
       title: "AWS Cloud Foundations",
       issuer: "AWS Academy",
       description: "Fundamental understanding of AWS cloud services and architecture",
     },
     {
-      title: "Salesforce Certified AI Associate",
-      issuer: "Salesforce",
-      description: "Acquired skills in AI and machine learning with Salesforce tools",
+      title: "Database Management System",
+      issuer: "Infosys Springboard",
+      description: "Comprehensive understanding of database design and management",
     },
     {
-      title: "Android Basics with Compose",
-      issuer: "Google Developers",
-      description: "Learned modern Android development using Jetpack Compose",
+      title: "Data Structures and Algorithms using Java",
+      issuer: "Infosys Springboard",
+      description: "Advanced knowledge of data structures and algorithmic problem-solving in Java",
     },
     {
-      title: "Complete Responsive Web Development",
-      issuer: "Udemy",
-      description: "Mastered modern web development techniques and responsive design",
+      title: "Agile Scrum in Practice",
+      issuer: "Infosys Springboard",
+      description: "Practical application of Agile and Scrum methodologies in software development",
     },
     {
-      title: "SQL Intermediate Certification",
-      issuer: "Hackerrank",
-      description: "Intermediate level SQL knowledge, including queries, joins, and data manipulation",
+      title: "Introduction to MongoDB",
+      issuer: "MongoDB Academy",
+      description: "NoSQL database fundamentals and MongoDB operations",
+    },
+    {
+      title: "React Certification",
+      issuer: "GeeksforGeeks",
+      description: "Modern React development patterns and best practices",
+    },
+    {
+      title: "Design Technology and Innovation",
+      issuer: "NPTEL",
+      description: "Innovation principles and design thinking methodologies",
     },
   ];
 

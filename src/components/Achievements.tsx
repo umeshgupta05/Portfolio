@@ -19,7 +19,7 @@ export const Achievements = () => {
           <div className="text-muted-foreground space-y-4">
             <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
               <Award className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <p>Top 2% in NPTEL Programming in Modern C++ and R Software certification exams</p>
+              <p>Awarded the Reliance Foundation Scholarship (2022-2026), receiving 50,000 annually for four years, in recognition of academic excellence and outstanding performance</p>
             </div>
             <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
               <Trophy className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
@@ -27,15 +27,23 @@ export const Achievements = () => {
             </div>
             <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
               <Star className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <p>Solved 300+ algorithmic problems on LeetCode; participated in 30+ competitive coding contests</p>
+              <p>Solved 600+ algorithmic problems on various coding platforms and participated in 40+ coding contests with a max rating of 1839 in leetcode</p>
             </div>
             <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
               <Trophy className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <p>Winner of two consecutive coding events organized by the ACM chapter of my university, showcasing problem-solving and programming skills</p>
+              <p>Winner of two consecutive coding events organized by the ACM chapter, VRSEC</p>
             </div>
             <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
               <Medal className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <p>Awarded Rs 50,000 Merit Scholarship by Reliance Foundation for exceptional academic performance</p>
+              <p>Secured Rank 567 in AP EAPCET 2022 among other candidates in the state</p>
+            </div>
+            <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
+              <Award className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <p>Achieved a score of 96.79% in the Joint Entrance Examination (IIT-JEE 2022)</p>
+            </div>
+            <div className="flex items-start gap-3 group hover:bg-accent/5 p-2 rounded-lg transition-colors">
+              <Medal className="w-5 h-5 text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <p>Awarded 10 medals for academic excellence during intermediate studies</p>
             </div>
           </div>
         </motion.div>

@@ -12,40 +12,40 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "Medi Collab",
-    description: "A medical knowledge-sharing platform enabling healthcare professionals to collaborate, share research, and engage in clinical discussions.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
-    tech: ["React", "Tailwind CSS"],
-    links: {
-      github: "https://github.com/umeshgupta05/MediCollab",
-      live: "https://medi-collab.vercel.app/",
-    },
-  },
-  {
-    title: "Lumbar Spine Degenerative Classification",
-    description: "An AI-powered tool for classifying degenerative changes in lumbar spine MRI scans, enhancing diagnostic accuracy and efficiency for radiologists.",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    tech: ["Python", "TensorFlow", "Deep Learning", "Medical Imaging"],
-    links: {
-      github: "https://github.com/umeshgupta05/lumbar-classification",
-      live: "#",
-    },
-  },
-  {
-    title: "ShopSphere",
-    description: "An e-commerce application developed as a prototype for the Walmart Sparkathon, featuring seamless shopping experience with modern UI/UX design.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tech: ["React", "Express.js", "Node.js", "MongoDB"],
-    links: {
-      github: "https://github.com/umeshgupta05/shopsphere",
-      live: "#",
-    },
-  },
-  {
     title: "SmartPath AI",
-    description: "An AI-powered personalized learning assistant that recommends courses based on user interests, certifications, and quiz performance.",
+    description: "Architected an AI-driven learning assistant delivering tailored course and certification recommendations based on user intent and quiz analytics. Incorporated adaptive feedback loops using Gemini and IBM Watson NLU for continuous personalization.",
     image: "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
-    tech: ["Python", "Machine Learning", "Flask", "React.js"],
+    tech: ["Flask", "MongoDB", "React", "Gemini API", "IBM NLU"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
+    title: "Collaborative Docx",
+    description: "Built a real-time document editing platform facilitating multi-user collaboration and synchronous updates. Utilized WebSockets and Supabase to ensure seamless synchronization and low-latency performance.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    tech: ["React", "Supabase", "WebSockets"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
+    title: "Lumbar Spine Degenerative Disease Classification",
+    description: "Building an AI system to classify lumbar spine degenerative conditions using MRI image datasets. Focused on five conditions including neural foraminal narrowing, subarticular stenosis, and spinal canal stenosis.",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    tech: ["Python", "CNN", "Medical Imaging", "Deep Learning"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
+    title: "Audio-based Grammar Scoring System",
+    description: "Developed an automated system to score spoken English grammar on a scale of 1-5 using .wav audio inputs, modeled as a regression task. Extracted diverse audio features including MFCCs, chroma, zero-crossing rate, spectral centroid, and deep speech embeddings from pretrained Wav2Vec2 models.",
+    image: "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
+    tech: ["Python", "Wav2Vec2", "LightGBM", "MLP", "Librosa"],
     links: {
       github: "#",
       live: "#",
@@ -53,31 +53,21 @@ const projects = [
   },
   {
     title: "Attendance Management System using Face Recognition",
-    description: "A face recognition-based system to automate attendance tracking with real-time detection.",
+    description: "Developed a desktop-based attendance management system leveraging face recognition to automate student attendance. Utilized Haar Cascade classifiers with OpenCV for real-time face detection and recognition from webcam feeds.",
     image: "/lovable-uploads/7900aada-266f-4c47-9bfc-cc9b56387ae4.png",
-    tech: ["Python", "OpenCV", "PyMySQL"],
+    tech: ["Python", "OpenCV", "PyMySQL", "Tkinter"],
     links: {
-      github: "https://github.com/umeshgupta05/Attendence-Management-System-Using-Face-Recognition",
+      github: "#",
       live: "#",
     },
   },
   {
-    title: "Smart Summarizer",
-    description: "A robust application prototype to generate concise summaries for PDF documents using state-of-the-art transformer models.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tech: ["Python", "Transformers", "NLP"],
-    links: {
-      github: "https://github.com/umeshgupta05/Smart-Summarizer",
-      live: "#",
-    },
-  },
-  {
-    title: "Intelligent Assistive Stick for Visually impaired and Elderly",
-    description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors and variable vibration intensity based on obstacle distance.",
+    title: "TaskTime Alert",
+    description: "Developed a smart alarm app that allows users to assign tasks to specific dates and times, triggering notifications as deadlines approach. Utilized AlarmManager with BroadcastReceiver to schedule precise, battery-efficient task reminders—even during idle modes.",
     image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
-    tech: ["IoT", "Arduino", "Ultrasonic Sensors"],
+    tech: ["Android", "Kotlin", "AlarmManager", "BroadcastReceiver"],
     links: {
-      github: "https://github.com/umeshgupta05/smart-stick",
+      github: "#",
       live: "#",
     },
   },
