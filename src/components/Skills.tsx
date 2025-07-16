@@ -134,12 +134,12 @@ export const Skills = () => {
                 {skills
                   .filter(skill => skill.category === category)
                   .map((skill) => (
-                    <motion.div
-                      key={skill.name}
-                      variants={skillVariants}
-                      whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-sage/10 backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-300"
-                    >
+                     <motion.div
+                       key={skill.name}
+                       variants={skillVariants}
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-sage/10 backdrop-blur-sm hover:bg-white/[0.05] transition-all duration-300 hover-scale hover-glow"
+                     >
                       <div className="flex-shrink-0">
                         <img 
                           src={skill.icon} 

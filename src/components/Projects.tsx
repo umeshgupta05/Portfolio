@@ -167,7 +167,7 @@ className="w-full"
 {projects.map((project) => (
 <CarouselItem key={project.title} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
 <motion.div variants={itemVariants}>
-<Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+<Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover-scale hover-glow">
 <motion.div
 initial="rest"
 whileHover="hover"

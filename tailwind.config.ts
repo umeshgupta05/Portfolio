@@ -50,6 +50,37 @@ export default {
         },
       },
       keyframes: {
+        // Accordion Animations
+        "accordion-down": {
+          from: { height: "0", opacity: "0" },
+          to: { height: "var(--radix-accordion-content-height)", opacity: "1" }
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)", opacity: "1" },
+          to: { height: "0", opacity: "0" }
+        },
+        
+        // Fade Animations
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
+        "fade-out": {
+          "0%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(10px)"
+          }
+        },
         "fade-up": {
           "0%": {
             opacity: "0",
@@ -60,18 +91,137 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "fade-in": {
+        
+        // Scale Animations
+        "scale-in": {
           "0%": {
-            opacity: "0",
+            transform: "scale(0.95)",
+            opacity: "0"
           },
           "100%": {
-            opacity: "1",
+            transform: "scale(1)",
+            opacity: "1"
+          }
+        },
+        "scale-out": {
+          from: { transform: "scale(1)", opacity: "1" },
+          to: { transform: "scale(0.95)", opacity: "0" }
+        },
+        
+        // Slide Animations
+        "slide-in-right": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" }
+        },
+        "slide-out-right": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" }
+        },
+        "slide-in-left": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" }
+        },
+        "slide-out-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" }
+        },
+        "slide-in-up": {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" }
+        },
+        "slide-out-up": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" }
+        },
+        "slide-in-down": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" }
+        },
+        "slide-out-down": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(100%)" }
+        },
+        
+        // Bounce Animation
+        "bounce-in": {
+          "0%": {
+            transform: "scale(0.3)",
+            opacity: "0"
           },
+          "50%": {
+            transform: "scale(1.05)"
+          },
+          "70%": {
+            transform: "scale(0.9)"
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1"
+          }
+        },
+        
+        // Pulse Animation
+        "pulse-slow": {
+          "0%, 100%": {
+            opacity: "1"
+          },
+          "50%": {
+            opacity: "0.5"
+          }
+        },
+        
+        // Shake Animation
+        "shake": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "10%, 30%, 50%, 70%, 90%": { transform: "translateX(-2px)" },
+          "20%, 40%, 60%, 80%": { transform: "translateX(2px)" }
+        },
+        
+        // Spin Variations
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" }
+        },
+        
+        // Gradient Animation
+        "gradient": {
+          "0%": {
+            "background-position": "0% 50%"
+          },
+          "50%": {
+            "background-position": "100% 50%"
+          },
+          "100%": {
+            "background-position": "0% 50%"
+          }
         },
       },
       animation: {
+        // Basic Animations
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
+        "fade-out": "fade-out 0.3s ease-out",
         "fade-up": "fade-up 0.5s ease-out forwards",
-        "fade-in": "fade-in 0.3s ease-out forwards",
+        "scale-in": "scale-in 0.2s ease-out",
+        "scale-out": "scale-out 0.2s ease-out",
+        "slide-in-right": "slide-in-right 0.3s ease-out",
+        "slide-out-right": "slide-out-right 0.3s ease-out",
+        "slide-in-left": "slide-in-left 0.3s ease-out",
+        "slide-out-left": "slide-out-left 0.3s ease-out",
+        "slide-in-up": "slide-in-up 0.3s ease-out",
+        "slide-out-up": "slide-out-up 0.3s ease-out",
+        "slide-in-down": "slide-in-down 0.3s ease-out",
+        "slide-out-down": "slide-out-down 0.3s ease-out",
+        "bounce-in": "bounce-in 0.5s ease-out",
+        "pulse-slow": "pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "shake": "shake 0.5s ease-in-out",
+        "spin-slow": "spin-slow 3s linear infinite",
+        "gradient": "gradient 8s ease infinite",
+        
+        // Combined Animations
+        "enter": "fade-in 0.3s ease-out, scale-in 0.2s ease-out",
+        "exit": "fade-out 0.3s ease-out, scale-out 0.2s ease-out",
       },
     },
   },

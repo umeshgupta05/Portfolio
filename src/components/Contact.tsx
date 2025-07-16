@@ -90,12 +90,12 @@ export const Contact = () => {
               className="w-full px-4 py-2 rounded-lg border border-border bg-white/[0.02] backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-sage focus:border-transparent transition-all"
             />
           </div>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            type="submit"
-            className="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2"
-          >
+           <motion.button
+             whileHover={{ scale: 1.05 }}
+             whileTap={{ scale: 0.95 }}
+             type="submit"
+             className="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2 hover-glow"
+           >
             <Send className="w-5 h-5" />
             <span>Send Message</span>
           </motion.button>

@@ -15,6 +15,7 @@ export const Hero = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
+          className="float"
         >
           <ArrowDown className="w-6 h-6 text-primary" />
         </motion.div>
