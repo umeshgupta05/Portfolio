@@ -71,6 +71,16 @@ const projects = [
       live: "#",
     },
   },
+  {
+    title: "Intelligent Assistive Stick for Visually impaired and Elderly",
+    description: "An innovative IoT-based smart stick that helps visually impaired individuals navigate safely using ultrasonic sensors and variable vibration intensity based on obstacle distance.",
+    image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+    tech: ["IoT", "Arduino", "Ultrasonic Sensors"],
+    links: {
+      github: "https://github.com/umeshgupta05/smart-stick",
+      live: "#",
+    },
+  },
 ];
 
 const containerVariants = {
