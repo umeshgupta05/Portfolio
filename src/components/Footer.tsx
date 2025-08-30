@@ -13,7 +13,7 @@ export const Footer = () => {
           <Github className="w-5 h-5" />
         </a>
         <a
-          href="https://www.linkedin.com/in/pedamallu-umesh-gupta-9504b825a"
+          href="https://www.linkedin.com/in/umesh-gupta-pedamallu-9504b825a/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"
