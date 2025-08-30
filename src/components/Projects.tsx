@@ -12,20 +12,20 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "SmartPath AI",
-    description: "Architected an AI-driven learning assistant delivering tailored course and certification recommendations based on user intent and quiz analytics. Incorporated adaptive feedback loops using Gemini and IBM Watson NLU for continuous personalization.",
-    image: "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
-    tech: ["Flask", "MongoDB", "React", "Gemini API", "IBM NLU"],
+    title: "College Blog Application",
+    description: "Developed a blogging platform enabling students to register with institutional emails and publish academic posts with images. Implemented secure authentication, structured content management, and file upload functionality.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    tech: ["PHP", "MySQL", "HTML/CSS"],
     links: {
       github: "#",
       live: "#",
     },
   },
   {
-    title: "Collaborative Docx",
-    description: "Built a real-time document editing platform facilitating multi-user collaboration and synchronous updates. Utilized WebSockets and Supabase to ensure seamless synchronization and low-latency performance.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tech: ["React", "Supabase", "WebSockets"],
+    title: "Food Donation Management System",
+    description: "Built a web platform connecting food donors with NGOs/orphanages, enabling real-time donation tracking and reducing food waste. Implemented role-based authentication, NGO verification workflows, and integrated PostgreSQL for secure data management.",
+    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433",
+    tech: ["Django", "Bootstrap", "PostgreSQL"],
     links: {
       github: "#",
       live: "#",

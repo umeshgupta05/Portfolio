@@ -5,14 +5,13 @@ import { Briefcase, GraduationCap } from "lucide-react";
 const experiences = [
   {
     title: "Mobile Application Developer",
-    company: "MedCopilot - Freelance Team Project",
-    duration: "January 2025 - Present",
+    company: "DeepMediQ",
+    duration: "January 2025 – June 2025",
     description: (
       <>
         <p>• Developed the frontend of DeepMediQ, a cross-platform mobile application using React Native to interface with a health-focused AI chatbot.</p>
         <p>• Designed intuitive UI components for smooth user interaction, enabling users to input medical queries and receive detailed, AI-generated responses.</p>
-        <p>• Worked closely with a 3 member development team to build scalable and maintainable mobile screens aligned with healthcare usability standards.</p>
-        <p>• Integrated the mobile interface with a backend chatbot supporting MedCopilot, an AI-powered health assistant by a US-based startup.</p>
+        <p>• Integrated the mobile interface with a backend chatbot supporting DeepMediQ, an AI-powered health assistant by a US-based startup.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,
@@ -20,24 +19,12 @@ const experiences = [
   {
     title: "Python Full Stack Development Intern",
     company: "Eduskills Foundation",
-    duration: "March 2025 - May 2025",
+    duration: "March 2025 – May 2025",
     description: (
       <>
-        <p>• Undergoing structured training in full stack development with a focus on Python, Django, and RESTful backend concepts.</p>
-        <p>• Learning core frontend technologies including HTML, CSS, JavaScript, and jQuery for responsive web design.</p>
-        <p>• Gaining foundational knowledge of integrating frontend interfaces with backend logic using Django framework.</p>
-      </>
-    ),
-    icon: <Briefcase className="w-6 h-6" />,
-  },
-  {
-    title: "Android Developer Intern",
-    company: "Eduskills Foundation - AICTE Virtual Internship",
-    duration: "July 2024 - August 2024",
-    description: (
-      <>
-        <p>• Developed an Android application using Jetpack Compose, implementing Material Design.</p>
-        <p>• Optimized app performance using Coroutines and efficient state handling.</p>
+        <p>• Trained in full stack web development with a focus on Python, Django, and RESTful API integration.</p>
+        <p>• Built responsive interfaces using HTML, CSS, JavaScript, and jQuery adhering to modern UI/UX practices.</p>
+        <p>• Developed mini-projects integrating frontend and backend logic using the Django MVT framework.</p>
       </>
     ),
     icon: <Briefcase className="w-6 h-6" />,
