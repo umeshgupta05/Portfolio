@@ -216,58 +216,6 @@ rel="noopener noreferrer"
 </Carousel>
 </motion.div>
 
-<motion.div  
-      variants={containerVariants}  
-      initial="hidden"  
-      whileInView="visible"  
-      viewport={{ once: true, margin: "-100px" }}  
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"  
-    >  
-      {projects.slice(1).map((project, index) => (  
-        <motion.div  
-          key={project.title}  
-          variants={itemVariants}  
-          className="group relative bg-white/[0.02] backdrop-blur-[2px] border border-border rounded-lg overflow-hidden hover:shadow-md transition-all duration-300"
-        >
-          <div className="p-4">
-            <h3 className="text-base font-semibold mb-1 text-primary line-clamp-1">{project.title}</h3>  
-            <p className="text-xs text-neutral mb-2 line-clamp-2">{project.description}</p>  
-            <div className="flex flex-wrap gap-1 mb-2">  
-              {project.tech.map((tech) => (  
-                <span  
-                  key={tech}  
-                  className="px-1.5 py-0.5 text-[10px] bg-secondary/10 text-secondary rounded-full"  
-                >  
-                  {tech}  
-                </span>  
-              ))}  
-            </div>  
-            <div className="flex gap-2">  
-              <motion.a  
-                whileHover={{ scale: 1.05 }}  
-                href={project.links.github}  
-                className="flex items-center gap-1 text-xs text-neutral hover:text-primary transition-colors"  
-                target="_blank"  
-                rel="noopener noreferrer"  
-              >  
-                <Github className="w-3 h-3" />  
-                <span>Code</span>  
-              </motion.a>  
-              <motion.a  
-                whileHover={{ scale: 1.05 }}  
-                href={project.links.live}  
-                className="flex items-center gap-1.5 text-xs text-neutral hover:text-secondary transition-colors"  
-                target="_blank"  
-                rel="noopener noreferrer"  
-              >  
-                <ExternalLink className="w-3 h-3" />  
-                <span>Live Demo</span>  
-              </motion.a>  
-            </div>  
-          </div>  
-        </motion.div>  
-      ))}  
-    </motion.div>  
   </div>  
 </section>
 
