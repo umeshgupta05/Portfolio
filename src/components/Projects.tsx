@@ -167,21 +167,8 @@ className="w-full"
 {projects.map((project) => (
 <CarouselItem key={project.title} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
 <motion.div variants={itemVariants}>
-<Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover-scale hover-glow">
-<motion.div
-initial="rest"
-whileHover="hover"
-animate="rest"
-className="aspect-video overflow-hidden"
->
-<motion.img
-variants={imageVariants}
-src={project.image}
-alt={project.title}
-className="w-full h-full object-cover"
-/>
-</motion.div>
-<CardContent className="p-4">
+                <Card className="bg-white/[0.02] backdrop-blur-sm border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover-scale hover-glow">
+                  <CardContent className="p-4">
 <h3 className="text-lg font-semibold mb-2 text-primary line-clamp-1">{project.title}</h3>
 <p className="text-sm text-neutral mb-3 line-clamp-2">{project.description}</p>
 <div className="flex flex-wrap gap-1.5 mb-3">
@@ -240,22 +227,9 @@ rel="noopener noreferrer"
         <motion.div  
           key={project.title}  
           variants={itemVariants}  
-          className="group relative bg-white/[0.02] backdrop-blur-[2px] border border-border rounded-lg overflow-hidden hover:shadow-md transition-all duration-300"  
-        >  
-          <motion.div  
-            initial="rest"  
-            whileHover="hover"  
-            animate="rest"  
-            className="aspect-video overflow-hidden"  
-          >  
-            <motion.img  
-              variants={imageVariants}  
-              src={project.image}  
-              alt={project.title}  
-              className="w-full h-full object-cover"  
-            />  
-          </motion.div>  
-          <div className="p-4">  
+          className="group relative bg-white/[0.02] backdrop-blur-[2px] border border-border rounded-lg overflow-hidden hover:shadow-md transition-all duration-300"
+        >
+          <div className="p-4">
             <h3 className="text-base font-semibold mb-1 text-primary line-clamp-1">{project.title}</h3>  
             <p className="text-xs text-neutral mb-2 line-clamp-2">{project.description}</p>  
             <div className="flex flex-wrap gap-1 mb-2">  
