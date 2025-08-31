@@ -57,7 +57,7 @@ const projects = [
     image: "/lovable-uploads/7900aada-266f-4c47-9bfc-cc9b56387ae4.png",
     tech: ["Python", "OpenCV", "PyMySQL", "Tkinter"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/Attendence-Management-System-Using-Face-Recognition",
       live: "#",
     },
   },
