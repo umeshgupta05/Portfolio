@@ -12,6 +12,27 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
   {
+  title: "Collaborative DocX Editor",
+  description: "Built a real-time collaborative document editor where multiple users can create, edit, and share documents simultaneously. Integrated Supabase for authentication and database management, ensuring version control, secure access, and seamless collaboration.",
+  image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df",
+  tech: ["React.js", "Supabase", "Node.js", "Tailwind CSS"],
+  links: {
+    github: "https://github.com/umeshgupta05/Collaborative-Docx",
+    live: "#",
+  },
+},
+
+{
+  title: "SmartPath AI - Adaptive Learning Platform",
+  description: "Developed an AI-driven learning platform that provides personalized course recommendations, adaptive learning paths, chatbot assistance, and real-time performance tracking. Integrated IBM Watson, Gemini, and BERT models with Flask backend and MongoDB for dynamic data handling.",
+  image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+  tech: ["Flask", "MongoDB", "IBM Watson", "Gemini", "BERT", "React.js"],
+  links: {
+    github: "https://github.com/umeshgupta05/SmartPathAI",
+    live: "",
+  },
+},
+  {
     title: "College Blog Application",
     description: "Developed a blogging platform enabling students to register with institutional emails and publish academic posts with images. Implemented secure authentication, structured content management, and file upload functionality.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
