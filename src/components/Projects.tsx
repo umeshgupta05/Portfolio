@@ -17,7 +17,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     tech: ["PHP", "MySQL", "HTML/CSS"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/college-blog",
       live: "#",
     },
   },
@@ -27,7 +27,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1593113598332-cd288d649433",
     tech: ["Django", "Bootstrap", "PostgreSQL"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/food-donation-management",
       live: "#",
     },
   },
