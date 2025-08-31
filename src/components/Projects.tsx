@@ -37,7 +37,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
     tech: ["Python", "CNN", "Medical Imaging", "Deep Learning"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/Lumbar-Spine-Classification",
       live: "#",
     },
   },
