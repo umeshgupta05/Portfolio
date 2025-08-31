@@ -47,7 +47,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
     tech: ["Python", "Wav2Vec2", "LightGBM", "MLP", "Librosa"],
     links: {
-      github: "#",
+      github: "https://github.com/umeshgupta05/Grammer-Scoring",
       live: "#",
     },
   },
@@ -77,7 +77,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
     tech: ["IoT", "Arduino", "Ultrasonic Sensors"],
     links: {
-      github: "https://github.com/umeshgupta05/smart-stick",
+      github: "https://github.com/umeshgupta05/Smart-Stick-for-Visual-Impaired",
       live: "#",
     },
   },
