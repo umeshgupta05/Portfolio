@@ -29,7 +29,7 @@ const projects = [
   tech: ["Flask", "MongoDB", "IBM Watson", "Gemini", "BERT", "React.js"],
   links: {
     github: "https://github.com/umeshgupta05/SmartPathAI",
-    live: "",
+    live: "https://smart-path-ai.vercel.app/",
   },
 },
   {
@@ -49,7 +49,7 @@ const projects = [
     tech: ["Django", "Bootstrap", "PostgreSQL"],
     links: {
       github: "https://github.com/umeshgupta05/food-donation-management",
-      live: "#",
+      live: "https://food-donation-management-bnvi.onrender.com",
     },
   },
   {
