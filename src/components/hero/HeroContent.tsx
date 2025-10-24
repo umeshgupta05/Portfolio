@@ -6,8 +6,8 @@ export const HeroContent = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.5 }
-    }
+      transition: { duration: 0.5 },
+    },
   };
 
   return (
@@ -25,8 +25,8 @@ export const HeroContent = () => {
       >
         Welcome to my portfolio
       </motion.span>
-      
-      <motion.h1 
+
+      <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -42,7 +42,8 @@ export const HeroContent = () => {
         transition={{ duration: 0.5 }}
         className="text-neutral text-lg md:text-xl mb-4"
       >
-        A passionate developer with expertise in AI, Web Development, and Cloud Technologies.
+        A passionate developer with expertise in AI, Web Development, and Cloud
+        Technologies.
       </motion.p>
       <motion.p
         initial={{ opacity: 0 }}
@@ -53,7 +54,7 @@ export const HeroContent = () => {
         Currently interested in: <InterestsText />
       </motion.p>
       <motion.a
-        href="/resume.pdf"
+        href="https://drive.google.com/file/d/1KPf4-RsuxnpqvSrhosW8HFZrHHypsM8X/view?usp=drive_link"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0 }}
