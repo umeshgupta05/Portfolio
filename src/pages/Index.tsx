@@ -1,4 +1,3 @@
-
 import { Hero } from "@/components/Hero";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
@@ -17,14 +16,14 @@ const Index = () => {
       transition={{ duration: 0.6 }}
       className="min-h-screen relative w-full"
     >
-      <div 
+      <div
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/b8468dcc-701f-4bd5-8695-e17a7bdc9cf6.png')",
+          backgroundImage: "url('/background-image.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.15
+          opacity: 0.15,
         }}
       />
       <div className="relative z-10 bg-white/10 backdrop-blur-[2px]">
