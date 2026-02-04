@@ -1,44 +1,36 @@
 import { Hero } from "@/components/Hero";
-import { Skills } from "@/components/Skills";
-import { Projects } from "@/components/Projects";
+import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
+import { Projects } from "@/components/Projects";
+import { Skills } from "@/components/Skills";
+import { CodingStats } from "@/components/CodingStats";
+import { GitHubContributions } from "@/components/GitHubContributions";
 import { Certifications } from "@/components/Certifications";
 import { Presentations } from "@/components/Presentations";
+import { Achievements } from "@/components/Achievements";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Achievements } from "@/components/Achievements";
-import { motion } from "framer-motion";
+import { Navigation } from "@/components/Navigation";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 const Index = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen relative w-full"
-    >
-      <div
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundImage: "url('/background-image.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          opacity: 0.15,
-        }}
-      />
-      <div className="relative z-10 bg-white/10 backdrop-blur-[2px]">
-        <Hero />
-        <Experience />
-        <Certifications />
-        <Presentations />
-        <Skills />
-        <Projects />
-        <Achievements />
-        <Contact />
-        <Footer />
-      </div>
-    </motion.div>
+    <div className="min-h-screen bg-white">
+      <ScrollProgress />
+      <Navigation />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Skills />
+      <CodingStats />
+      <GitHubContributions />
+      <Presentations />
+      <Certifications />
+      <Achievements />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 

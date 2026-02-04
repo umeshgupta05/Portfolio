@@ -1,122 +1,49 @@
-
 import { motion } from "framer-motion";
-import { Award } from "lucide-react";
+
+const certifications = [
+  "Programming in Modern C++ - NPTEL (Score: 77/100, Top 2%)",
+  "Foundations of R Software - NPTEL (Score: 97/100, Top 2%)",
+  "AWS Cloud Foundations - AWS Academy",
+  "Django Web Development - GeeksForGeeks",
+  "SQL Proficiency Certification - HackerRank",
+  "Database Management System - Infosys Springboard",
+  "Data Structures and Algorithms using Java - Infosys Springboard",
+  "Artificial Intelligence Foundation Certification - Infosys Springboard",
+  "Agile Scrum in Practice - Infosys Springboard",
+  "Design Technology and Innovation - NPTEL",
+];
 
 export const Certifications = () => {
-  const certifications = [
-    {
-      title: "Programming in Modern C++",
-      issuer: "NPTEL",
-      description: "Score: 77/100 Top 2%",
-    },
-    {
-      title: "AWS Cloud Foundations",
-      issuer: "AWS Academy",
-      description: "Fundamental understanding of AWS cloud services and architecture",
-    },
-    {
-      title: "Database Management System",
-      issuer: "Infosys Springboard",
-      description: "Comprehensive understanding of database design and management",
-    },
-    {
-      title: "Data Structures and Algorithms using Java",
-      issuer: "Infosys Springboard",
-      description: "Advanced knowledge of data structures and algorithmic problem-solving in Java",
-    },
-    {
-      title: "Agile Scrum in Practice",
-      issuer: "Infosys Springboard",
-      description: "Practical application of Agile and Scrum methodologies in software development",
-    },
-    {
-      title: "Introduction to MongoDB",
-      issuer: "MongoDB Academy",
-      description: "NoSQL database fundamentals and MongoDB operations",
-    },
-    {
-      title: "React Certification",
-      issuer: "GeeksforGeeks",
-      description: "Modern React development patterns and best practices",
-    },
-    {
-      title: "Design Technology and Innovation",
-      issuer: "NPTEL",
-      description: "Innovation principles and design thinking methodologies",
-    },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
-    <section className="py-20 px-4 bg-transparent" id="certifications">
-      <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="text-center mb-12"
-        >
-          <motion.span
-            variants={itemVariants}
-            className="text-primary inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 bg-primary/10"
-          >
-            Certifications
-          </motion.span>
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6 text-primary"
-          >
-            Professional Development
-          </motion.h2>
-        </motion.div>
+    <section
+      id="certifications"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50 rounded-lg"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="space-y-12"
+      >
+        <h2 className="text-3xl font-bold text-gray-900">Certifications</h2>
 
-        <motion.ul
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="space-y-6 flex flex-col items-center"
-        >
+        <div className="grid md:grid-cols-2 gap-4">
           {certifications.map((cert, index) => (
-            <motion.li
+            <motion.div
               key={index}
-              variants={itemVariants}
-              className="flex items-start gap-4 max-w-xl w-full bg-white/[0.02] backdrop-blur-[2px] p-4 rounded-lg border border-border"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition"
             >
-              <div className="mt-1">
-                <Award className="w-6 h-6 text-sage" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-primary">{cert.title}</h3>
-                <p className="text-sm text-terra">{cert.issuer}</p>
-                <p className="text-sm text-muted-foreground">{cert.description}</p>
-              </div>
-            </motion.li>
+              <span className="text-blue-500 text-2xl font-bold mt-1">✓</span>
+              <span className="text-gray-700">{cert}</span>
+            </motion.div>
           ))}
-        </motion.ul>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
