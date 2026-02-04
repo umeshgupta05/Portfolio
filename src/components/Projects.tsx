@@ -74,7 +74,7 @@ const projects = [
       "Designed normalized relational schema and responsive JSP UI deployed on Apache Tomcat.",
     ],
     tech: ["Java EE", "Spring Boot", "JSP", "Oracle", "Tomcat"],
-    github: "#",
+    github: "https://github.com/umeshgupta05/Library_Management_System/",
   },
   {
     title: "College Blog Application",
@@ -86,16 +86,7 @@ const projects = [
     tech: ["PHP", "MySQL", "HTML/CSS"],
     github: "https://github.com/umeshgupta05/college-blog",
   },
-  {
-    title: "Modern Resume Builder",
-    description:
-      "Interactive web application to create and edit professional resumes with real-time preview and PDF download.",
-    details: [
-      "Designed responsive UI using Angular components for smooth cross-device performance.",
-    ],
-    tech: ["Angular", "TypeScript", "HTML/CSS"],
-    github: "https://github.com/umeshgupta05/Modern-Resume-Builder",
-  },
+  
 ];
 
 export const Projects = () => {
