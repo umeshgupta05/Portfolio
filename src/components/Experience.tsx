@@ -1,39 +1,63 @@
 import { motion } from "framer-motion";
 
 const experiences = [
+  [
   {
-    title: "Mobile Application Developer",
-    company: "DeepMediQ",
-    period: "May 2025 – July 2025",
-    location: "Remote",
-    points: [
+    "title": "Java Full Stack Virtual Intern",
+    "company": "Infosys Springboard",
+    "period": "February 2026 – Present",
+    "location": "Remote",
+    "points": [
+      "Training in Java Full Stack development with hands-on practice in Core Java, Spring Boot, RESTful APIs, and backend application architecture.",
+      "Developing full-stack applications with frontend–backend integration, database connectivity, and industry-standard coding practices."
+    ]
+  },
+  {
+    "title": "Mobile Application Developer",
+    "company": "DeepMediQ",
+    "period": "May 2025 – July 2025",
+    "location": "Remote",
+    "points": [
       "Developed the frontend of DeepMediQ, a cross-platform mobile application using React Native to interface with a health-focused AI chatbot.",
       "Designed intuitive UI components for smooth user interaction, enabling users to input medical queries and receive detailed, AI-generated responses.",
-      "Integrated the mobile interface with a backend chatbot supporting DeepMediQ, an AI-powered health assistant by a US-based startup.",
-    ],
+      "Integrated the mobile interface with a backend chatbot supporting DeepMediQ, an AI-powered health assistant by a US-based startup."
+    ]
   },
   {
-    title: "Python Full Stack Development Intern",
-    company: "Eduskills Foundation",
-    period: "March 2025 – May 2025",
-    location: "Remote",
-    points: [
+    "title": "Python Full Stack Development Intern",
+    "company": "Eduskills Foundation",
+    "period": "March 2025 – May 2025",
+    "location": "Remote",
+    "points": [
       "Trained in Python, Django, REST API development, database integration, and responsive frontend design.",
       "Developed mini-projects using Django MVT architecture, implementing authentication, CRUD operations, and structured backend logic.",
-      "Gained hands-on experience with Git, virtual environments, JSON-based APIs, and deployment-ready project structuring.",
-    ],
+      "Gained hands-on experience with Git, virtual environments, JSON-based APIs, and deployment-ready project structuring."
+    ]
   },
   {
-    title: "AI Virtual Intern",
-    company: "TechSaksham (A joint initiative by Microsoft and SAP)",
-    period: "November 2024 – December 2024",
-    location: "Remote",
-    points: [
+    "title": "AI Virtual Intern",
+    "company": "TechSaksham",
+    "period": "November 2024 – December 2024",
+    "location": "Remote",
+    "points": [
       "Designed and developed an Attendance Management System using Face Recognition with Python.",
       "Implemented Haar Cascade classifier and image processing using OpenCV and Pillow for accurate facial detection.",
-      "Integrated attendance recording with a backend database using PyMySQL for efficient data management.",
-    ],
+      "Integrated attendance recording with a backend database using PyMySQL for efficient data management."
+    ]
   },
+  {
+    "title": "Amazon AWS Virtual Intern",
+    "company": "Eduskills Foundation",
+    "period": "April 2024 – June 2024",
+    "location": "Remote",
+    "points": [
+      "Worked with key AWS services including EC2, S3, IAM, VPC, and CloudWatch for deployment and monitoring.",
+      "Deployed a static website by configuring EC2 instances, security groups, and S3 storage, ensuring secure access and high availability.",
+      "Learned cloud security basics, cost optimization techniques, and resource monitoring using CloudWatch dashboards."
+    ]
+  }
+],
+
 ];
 
 export const Experience = () => {
