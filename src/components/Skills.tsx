@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Code,
-  Globe,
-  Database,
-  Wrench,
-  Monitor,
-  Users,
-} from "lucide-react";
+import { Code, Globe, Database, Wrench, Monitor, Users } from "lucide-react";
 
 const skillCategories = [
   {
@@ -83,7 +76,9 @@ export const Skills = () => {
       >
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Skills</h2>
-          <p className="text-gray-600">Technical expertise and professional competencies</p>
+          <p className="text-gray-600">
+            Technical expertise and professional competencies
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -98,15 +93,20 @@ export const Skills = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 rounded-xl blur-xl transition duration-300"
-                  style={{
-                    backgroundImage: `linear-gradient(135deg, var(--color-from), var(--color-to))`,
-                    "--color-from": skillGroup.color.split(" ")[1],
-                    "--color-to": skillGroup.color.split(" ")[3],
-                  } as React.CSSProperties}
+                <div
+                  className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 rounded-xl blur-xl transition duration-300"
+                  style={
+                    {
+                      backgroundImage: `linear-gradient(135deg, var(--color-from), var(--color-to))`,
+                      "--color-from": skillGroup.color.split(" ")[1],
+                      "--color-to": skillGroup.color.split(" ")[3],
+                    } as React.CSSProperties
+                  }
                 />
                 <div className="relative bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition backdrop-blur-xl">
-                  <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${skillGroup.color} text-white mb-4`}>
+                  <div
+                    className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${skillGroup.color} text-white mb-4`}
+                  >
                     <IconComponent size={24} />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-4">

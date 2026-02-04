@@ -28,7 +28,11 @@ interface ShinyButtonProps {
   onClick?: () => void;
 }
 
-export function ShinyButton({ children, className, onClick }: ShinyButtonProps) {
+export function ShinyButton({
+  children,
+  className,
+  onClick,
+}: ShinyButtonProps) {
   return (
     <motion.button
       {...animationProps}

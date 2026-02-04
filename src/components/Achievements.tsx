@@ -6,7 +6,6 @@ const achievements = [
   "Winner of two consecutive coding events organized by the ACM chapter, VRSEC",
   "Secured Rank 567 out of 1,94,752 candidates in AP EAPCET 2022 (Top 0.3% statewide)",
   "Achieved 96.79% in Joint Entrance Examination (IIT-JEE 2022) with 10 medals for academic excellence during intermediate studies",
-  
 ];
 
 const responsibilities = [

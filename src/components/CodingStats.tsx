@@ -2,14 +2,7 @@
 
 import { motion } from "framer-motion";
 import NumberTicker from "@/components/magicui/number-ticker";
-import {
-  Code2,
-  TrendingUp,
-  Zap,
-  Award,
-  Target,
-  Flame,
-} from "lucide-react";
+import { Code2, TrendingUp, Zap, Award, Target, Flame } from "lucide-react";
 
 const codolioStats = {
   questionsAttempted: 1405,
@@ -72,7 +65,10 @@ export const CodingStats = () => {
   ];
 
   return (
-    <section id="coding-stats" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section
+      id="coding-stats"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +77,9 @@ export const CodingStats = () => {
         className="space-y-12"
       >
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">Competitive Programming Stats</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+            Competitive Programming Stats
+          </h2>
           <p className="text-gray-600">Codolio Profile Performance Metrics</p>
         </div>
 
@@ -137,10 +135,14 @@ export const CodingStats = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-300" />
           <div className="relative bg-white rounded-xl p-8 border border-gray-200 hover:border-gray-300 transition">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">Practice Intensity</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">
+              Practice Intensity
+            </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="space-y-2 border-l-4 border-indigo-500 pl-4">
-                <p className="text-gray-600 text-sm font-medium">Questions Attempted</p>
+                <p className="text-gray-600 text-sm font-medium">
+                  Questions Attempted
+                </p>
                 <p className="text-3xl font-bold text-gray-900">
                   <NumberTicker value={stats.questionsAttempted} />+
                 </p>
@@ -152,7 +154,9 @@ export const CodingStats = () => {
                 </p>
               </div>
               <div className="space-y-2 border-l-4 border-blue-500 pl-4">
-                <p className="text-gray-600 text-sm font-medium">Total Submissions</p>
+                <p className="text-gray-600 text-sm font-medium">
+                  Total Submissions
+                </p>
                 <p className="text-3xl font-bold text-gray-900">
                   <NumberTicker value={stats.submissions} />
                 </p>

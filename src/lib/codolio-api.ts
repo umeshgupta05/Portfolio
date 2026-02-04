@@ -4,7 +4,7 @@ export async function fetchCodolioStats() {
     // Using CORS proxy to fetch Codolio profile
     const response = await fetch(
       "https://api.allorigins.win/get?url=" +
-      encodeURIComponent("https://codolio.com/profile/umeshgupta05")
+        encodeURIComponent("https://codolio.com/profile/umeshgupta05"),
     );
     const data = await response.json();
     const html = data.contents;

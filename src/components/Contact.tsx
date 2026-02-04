@@ -22,9 +22,11 @@ export const Contact = () => {
         </p>
 
         <div className="flex justify-center">
-          <ShinyButton 
+          <ShinyButton
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-            onClick={() => window.location.href = 'mailto:saiumeshgupta@gmail.com'}
+            onClick={() =>
+              (window.location.href = "mailto:saiumeshgupta@gmail.com")
+            }
           >
             <Mail className="inline-block mr-2" size={16} />
             Get In Touch

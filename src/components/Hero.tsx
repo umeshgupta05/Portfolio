@@ -28,7 +28,7 @@ export const Hero = () => {
       >
         <div>
           <BlurFade delay={0.1} inView>
-            <SparklesText 
+            <SparklesText
               text="Umesh Gupta Pedamallu"
               className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4"
               colors={{ first: "#9333ea", second: "#ec4899" }}

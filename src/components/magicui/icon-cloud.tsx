@@ -8,7 +8,9 @@ export type DynamicCloudProps = {
 };
 
 export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
-  const [positions, setPositions] = useState<Array<{ x: number; y: number; z: number }>>([]);
+  const [positions, setPositions] = useState<
+    Array<{ x: number; y: number; z: number }>
+  >([]);
 
   useEffect(() => {
     // Generate random positions for icons
@@ -54,4 +56,3 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     </div>
   );
 }
-
