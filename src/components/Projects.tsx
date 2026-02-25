@@ -10,7 +10,7 @@ const projects = [
     details: [
       "Integrated adaptive feedback loops and a real-time chatbot leveraging Gemini API and IBM Watson NLU for continuous personalization and academic support.",
     ],
-    tech: ["Flask", "MongoDB", "React", "Gemini API", "IBM Watson NLU"],
+    tech: ["Django", "Oracle", "React", "Gemini API"],
     github: "https://github.com/umeshgupta05/SmartPathAI",
   },
   {
