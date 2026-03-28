@@ -21,7 +21,7 @@ const projects = [
       "Engineered secure backend using Django with role-based authentication, NGO verification workflows, and MySQL-based data storage.",
       "Designed intuitive and mobile-responsive UI with Bootstrap for seamless accessibility across devices.",
     ],
-    tech: ["Django", "Bootstrap", "MySQL"],
+    tech: ["Spring Boot", "React", "PostgreSQL"],
     github: "https://github.com/umeshgupta05/food-donation-management",
   },
   {
@@ -77,14 +77,14 @@ const projects = [
     github: "https://github.com/umeshgupta05/Library_Management_System/",
   },
   {
-    title: "College Blog Application",
+    title: "Draftory",
     description:
       "Blogging platform enabling students to register with institutional emails and publish academic posts with image uploads.",
     details: [
       "Implemented secure authentication, structured content management, and file upload functionality.",
     ],
-    tech: ["PHP", "MySQL", "HTML/CSS"],
-    github: "https://github.com/umeshgupta05/college-blog",
+    tech: ["Expressjs", "MySQL", "React"],
+    github: "https://github.com/umeshgupta05/Draftory",
   },
   
 ];
