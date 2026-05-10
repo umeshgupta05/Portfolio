@@ -12,14 +12,28 @@ const experiences = [
     ],
   },
   {
+    title: "Web Developer & Cloud Integration Intern",
+    company: "SkillDzire Technologies Pvt. Ltd",
+    period: "November 2025 – March 2026",
+    location: "Remote",
+    points: [
+      "Developed and deployed 3 full-stack applications, improving performance and responsiveness by 25%.",
+      "Integrated cloud services (AWS/Cloud) for hosting, storage, and deployment, reducing manual effort by 40%.",
+      "Designed 10 RESTful APIs with authentication and database integration, reducing data retrieval time by 30%.",
+      "Improved scalability using modular architecture and clean code, reducing bug resolution time by 20%.",
+    ],
+  },
+  {
     title: "Mobile Application Developer",
     company: "DeepMediQ",
     period: "May 2025 – July 2025",
     location: "Remote",
     points: [
-      "Developed the frontend of DeepMediQ, a cross-platform mobile application using React Native to interface with a health-focused AI chatbot.",
-      "Designed intuitive UI components for smooth user interaction, enabling users to input medical queries and receive detailed, AI-generated responses.",
-      "Integrated the mobile interface with a backend chatbot supporting DeepMediQ, an AI-powered health assistant by a US-based startup.",
+      "Engineered a cross-platform mobile application using React Native with Expo by migrating a React-based web chatbot, enabling seamless AI-driven healthcare interactions for 500+ users during testing.",
+      "Designed and implemented responsive, user-centric UI components, improving user engagement.",
+      "Integrated frontend with backend REST APIs, enabling real-time AI responses with an average latency of <2 seconds.",
+      "Optimized app performance using efficient state management and API handling, reducing app load time by 30%.",
+      "Collaborated in debugging and feature enhancements, improving app stability and reducing crash occurrences by 20%.",
     ],
   },
   {

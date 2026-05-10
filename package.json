@@ -16,11 +16,12 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.462.0",
+    "magic-ui": "latest",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-type-animation": "^3.2.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7",
-    "magic-ui": "latest"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

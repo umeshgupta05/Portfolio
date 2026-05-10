@@ -22,7 +22,7 @@ export const About = () => {
             </p>
             <p className="text-gray-600">2022 – Present</p>
             <p className="text-gray-700 font-medium mt-2">
-              CGPA: 9.36/10.0 | Honors in Full Stack Development
+              CGPA: 9.26/10.0 | Honors in Full Stack Development
             </p>
           </div>
 
