@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
 
 const experiences = [
-  {
-    title: "Java Full Stack Virtual Intern",
-    company: "Infosys Springboard",
-    period: "February 2026 – Present",
-    location: "Remote",
-    points: [
-      "Training in Java Full Stack development with hands-on practice in Core Java, Spring Boot, RESTful APIs, and backend application architecture.",
-      "Developing full-stack applications with frontend–backend integration, database connectivity, and industry-standard coding practices.",
-    ],
-  },
+  
   {
     title: "Web Developer & Cloud Integration Intern",
     company: "SkillDzire Technologies Pvt. Ltd",
