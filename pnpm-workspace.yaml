@@ -1,5 +1,0 @@
-allowBuilds:
-  '@swc/core': false
-  dtrace-provider: false
-  esbuild: false
-  odbc: false
